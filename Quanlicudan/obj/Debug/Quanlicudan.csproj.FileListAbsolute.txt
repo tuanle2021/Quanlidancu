@@ -1,0 +1,11 @@
+D:\LUUBAI\Quanlicudan\Quanlicudan\bin\Debug\Quanlicudan.exe.config
+D:\LUUBAI\Quanlicudan\Quanlicudan\bin\Debug\Quanlicudan.exe
+D:\LUUBAI\Quanlicudan\Quanlicudan\bin\Debug\Quanlicudan.pdb
+D:\LUUBAI\Quanlicudan\Quanlicudan\obj\Debug\Quanlicudan.csproj.AssemblyReference.cache
+D:\LUUBAI\Quanlicudan\Quanlicudan\obj\Debug\Quanlicudan.FmLogin.resources
+D:\LUUBAI\Quanlicudan\Quanlicudan\obj\Debug\Quanlicudan.FmMain.resources
+D:\LUUBAI\Quanlicudan\Quanlicudan\obj\Debug\Quanlicudan.Properties.Resources.resources
+D:\LUUBAI\Quanlicudan\Quanlicudan\obj\Debug\Quanlicudan.csproj.GenerateResource.cache
+D:\LUUBAI\Quanlicudan\Quanlicudan\obj\Debug\Quanlicudan.csproj.CoreCompileInputs.cache
+D:\LUUBAI\Quanlicudan\Quanlicudan\obj\Debug\Quanlicudan.exe
+D:\LUUBAI\Quanlicudan\Quanlicudan\obj\Debug\Quanlicudan.pdb
