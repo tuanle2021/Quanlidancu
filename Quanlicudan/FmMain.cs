@@ -28,5 +28,10 @@ namespace Quanlicudan
 			f.Show();
 			this.Hide();
 		}
+
+		private void FmMain_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

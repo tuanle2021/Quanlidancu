@@ -1,0 +1,13 @@
+D:\Quanlidancu\DAO\bin\Debug\DAO.exe.config
+D:\Quanlidancu\DAO\bin\Debug\DAO.exe
+D:\Quanlidancu\DAO\bin\Debug\DAO.pdb
+D:\Quanlidancu\DAO\bin\Debug\DTO.exe
+D:\Quanlidancu\DAO\bin\Debug\DTO.pdb
+D:\Quanlidancu\DAO\bin\Debug\DTO.exe.config
+D:\Quanlidancu\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\Quanlidancu\DAO\obj\Debug\DAO.Properties.Resources.resources
+D:\Quanlidancu\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+D:\Quanlidancu\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Quanlidancu\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\Quanlidancu\DAO\obj\Debug\DAO.exe
+D:\Quanlidancu\DAO\obj\Debug\DAO.pdb

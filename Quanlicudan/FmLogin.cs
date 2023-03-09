@@ -32,5 +32,12 @@ namespace Quanlicudan
 			}
 			;
 		}
+
+		private void btnLogin_Click(object sender, EventArgs e)
+		{
+			FmQuanli f = new FmQuanli();
+			f.Show();
+			this.Hide();
+		}
 	}
 }

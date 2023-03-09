@@ -41,46 +41,44 @@ namespace Quanlicudan
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(20, 23);
-			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label1.Location = new System.Drawing.Point(27, 28);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(55, 13);
+			this.label1.Size = new System.Drawing.Size(73, 17);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Username";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(20, 63);
-			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label2.Location = new System.Drawing.Point(27, 78);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(53, 13);
+			this.label2.Size = new System.Drawing.Size(69, 17);
 			this.label2.TabIndex = 1;
 			this.label2.Text = "Password";
 			// 
 			// txtUsername
 			// 
-			this.txtUsername.Location = new System.Drawing.Point(110, 23);
-			this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtUsername.Location = new System.Drawing.Point(147, 28);
+			this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtUsername.Name = "txtUsername";
-			this.txtUsername.Size = new System.Drawing.Size(134, 20);
+			this.txtUsername.Size = new System.Drawing.Size(177, 22);
 			this.txtUsername.TabIndex = 2;
 			// 
 			// txtPassword
 			// 
-			this.txtPassword.Location = new System.Drawing.Point(110, 59);
-			this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtPassword.Location = new System.Drawing.Point(147, 73);
+			this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.txtPassword.Name = "txtPassword";
-			this.txtPassword.Size = new System.Drawing.Size(134, 20);
+			this.txtPassword.Size = new System.Drawing.Size(177, 22);
 			this.txtPassword.TabIndex = 3;
 			// 
 			// checkBox1
 			// 
 			this.checkBox1.AutoSize = true;
-			this.checkBox1.Location = new System.Drawing.Point(110, 99);
-			this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.checkBox1.Location = new System.Drawing.Point(147, 122);
+			this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(101, 17);
+			this.checkBox1.Size = new System.Drawing.Size(128, 21);
 			this.checkBox1.TabIndex = 4;
 			this.checkBox1.Text = "Show password";
 			this.checkBox1.UseVisualStyleBackColor = true;
@@ -88,20 +86,21 @@ namespace Quanlicudan
 			// 
 			// btnLogin
 			// 
-			this.btnLogin.Location = new System.Drawing.Point(110, 140);
-			this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnLogin.Location = new System.Drawing.Point(147, 172);
+			this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnLogin.Name = "btnLogin";
-			this.btnLogin.Size = new System.Drawing.Size(61, 22);
+			this.btnLogin.Size = new System.Drawing.Size(81, 27);
 			this.btnLogin.TabIndex = 5;
 			this.btnLogin.Text = "Login";
 			this.btnLogin.UseVisualStyleBackColor = true;
+			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
 			// 
 			// btnExit
 			// 
-			this.btnExit.Location = new System.Drawing.Point(182, 140);
-			this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnExit.Location = new System.Drawing.Point(243, 172);
+			this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnExit.Name = "btnExit";
-			this.btnExit.Size = new System.Drawing.Size(61, 22);
+			this.btnExit.Size = new System.Drawing.Size(81, 27);
 			this.btnExit.TabIndex = 6;
 			this.btnExit.Text = "Exit";
 			this.btnExit.UseVisualStyleBackColor = true;
@@ -109,9 +108,9 @@ namespace Quanlicudan
 			// 
 			// FmLogin
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(338, 192);
+			this.ClientSize = new System.Drawing.Size(451, 236);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnLogin);
 			this.Controls.Add(this.checkBox1);
@@ -119,7 +118,7 @@ namespace Quanlicudan
 			this.Controls.Add(this.txtUsername);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "FmLogin";
 			this.Text = "FmLogin";
 			this.ResumeLayout(false);
