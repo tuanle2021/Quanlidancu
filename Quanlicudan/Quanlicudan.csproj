@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmDancu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmDancu.Designer.cs">
+      <DependentUpon>FmDancu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +73,23 @@
     <Compile Include="FmQuanli.Designer.cs">
       <DependentUpon>FmQuanli.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmThem.Designer.cs">
+      <DependentUpon>FmThem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmUserprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmUserprofile.Designer.cs">
+      <DependentUpon>FmUserprofile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmDancu.resx">
+      <DependentUpon>FmDancu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmLogin.resx">
       <DependentUpon>FmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +98,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmQuanli.resx">
       <DependentUpon>FmQuanli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmThem.resx">
+      <DependentUpon>FmThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmUserprofile.resx">
+      <DependentUpon>FmUserprofile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,6 +132,14 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{1d0f2b2a-3c1e-4e2a-9e06-51d9dea6d749}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{D227383C-D649-4B81-8B8F-B7865587AAA7}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{C595DBAB-B65D-467E-A3D2-0F49230E8E90}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

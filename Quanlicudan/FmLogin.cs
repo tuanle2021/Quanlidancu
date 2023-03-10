@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAO;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,9 +37,26 @@ namespace Quanlicudan
 
 		private void btnLogin_Click(object sender, EventArgs e)
 		{
-			FmQuanli f = new FmQuanli();
-			f.Show();
-			this.Hide();
+			string username = txtUsername.Text;
+			string password = txtPassword.Text;
+			if (login(username, password))
+			{
+				User loginUser = UserDAO.Instance.GetUserbyUsername(username);
+				FmQuanli f = new FmQuanli(loginUser);
+				f.Show();
+				this.Hide();
+			}
+			else
+				MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Cảnh báo", MessageBoxButtons.YesNo);
+		}
+		bool login(string username, string password)
+		{
+			return UserDAO.Instance.login(username,password);
+		}
+
+		private void btnLogin_KeyPress(object sender, KeyPressEventArgs e)
+		{
+
 		}
 	}
 }

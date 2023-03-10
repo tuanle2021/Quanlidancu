@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,16 @@ namespace DTO
 			this.namsinh = namsinh;
 			this.gioitinh = gioitinh;
 			this.madiaban = madiaban;
+		}
+		public User(DataRow row)
+		{
+			this.id =row["id"].ToString();
+			this.username =row["username"].ToString();
+			this.password =row["password"].ToString();
+			this.ten =row["ten"].ToString();
+			this.namsinh = row["namsinh"].ToString();
+			this.gioitinh = row["gioitinh"].ToString();
+			this.madiaban = row["madiaban"].ToString();
 		}
 	}
 }

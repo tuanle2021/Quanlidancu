@@ -42,6 +42,7 @@ namespace Quanlicudan
 			this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.btnXem = new System.Windows.Forms.ToolStripButton();
 			this.btnThem = new System.Windows.Forms.ToolStripButton();
 			this.btnXoa = new System.Windows.Forms.ToolStripButton();
 			this.btnSua = new System.Windows.Forms.ToolStripButton();
@@ -58,7 +59,6 @@ namespace Quanlicudan
 			this.label1 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.dtgvCudan = new System.Windows.Forms.DataGridView();
-			this.btnXem = new System.Windows.Forms.ToolStripButton();
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -91,13 +91,14 @@ namespace Quanlicudan
 			// quảnLíTàiKhoảnToolStripMenuItem
 			// 
 			this.quảnLíTàiKhoảnToolStripMenuItem.Name = "quảnLíTàiKhoảnToolStripMenuItem";
-			this.quảnLíTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+			this.quảnLíTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.quảnLíTàiKhoảnToolStripMenuItem.Text = "Quản lí tài khoản";
+			this.quảnLíTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.quảnLíTàiKhoảnToolStripMenuItem_Click);
 			// 
 			// đăngXuấtToolStripMenuItem
 			// 
 			this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-			this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+			this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
 			// 
 			// quảnLíToolStripMenuItem
@@ -156,6 +157,15 @@ namespace Quanlicudan
 			this.toolStrip1.TabIndex = 2;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
+			// btnXem
+			// 
+			this.btnXem.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.Image")));
+			this.btnXem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnXem.Name = "btnXem";
+			this.btnXem.Size = new System.Drawing.Size(63, 24);
+			this.btnXem.Text = "Xem";
+			this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+			// 
 			// btnThem
 			// 
 			this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
@@ -163,6 +173,7 @@ namespace Quanlicudan
 			this.btnThem.Name = "btnThem";
 			this.btnThem.Size = new System.Drawing.Size(70, 24);
 			this.btnThem.Text = "Thêm";
+			this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 			// 
 			// btnXoa
 			// 
@@ -223,6 +234,7 @@ namespace Quanlicudan
 			// btnTimkiem
 			// 
 			this.btnTimkiem.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTimkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnTimkiem.Location = new System.Drawing.Point(853, 21);
 			this.btnTimkiem.Name = "btnTimkiem";
 			this.btnTimkiem.Size = new System.Drawing.Size(138, 38);
@@ -297,15 +309,6 @@ namespace Quanlicudan
 			this.dtgvCudan.RowTemplate.Height = 24;
 			this.dtgvCudan.Size = new System.Drawing.Size(1011, 312);
 			this.dtgvCudan.TabIndex = 5;
-			// 
-			// btnXem
-			// 
-			this.btnXem.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.Image")));
-			this.btnXem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnXem.Name = "btnXem";
-			this.btnXem.Size = new System.Drawing.Size(63, 24);
-			this.btnXem.Text = "Xem";
-			this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
 			// 
 			// FmQuanli
 			// 

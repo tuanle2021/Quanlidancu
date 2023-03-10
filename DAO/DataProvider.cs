@@ -36,9 +36,29 @@ namespace DAO
 			Openconnect();
 			SqlDataAdapter sqlData = new SqlDataAdapter(sqlSelect, conn);
 			sqlData.Fill(dt);
+			CloseConnect();
+			return dt;
+		}
+		public DataTable ExcuteQuery(string sqlSelect)
+		{
+			DataTable dt = new DataTable();
+			Openconnect();
+			SqlCommand command = new SqlCommand(sqlSelect, conn);
+			SqlDataAdapter adapter = new SqlDataAdapter(command);
+			adapter.Fill(dt);
+			CloseConnect();
 			return dt;
 		}
 		//Cac lenh Insert dele....
+		public int ExecuteNonQuery(string sqlSelect)
+		{
+			Openconnect();
+			int data = 0;
+			SqlCommand command = new SqlCommand(sqlSelect, conn);
+			data = command.ExecuteNonQuery();
+			CloseConnect();
+			return data;
+		}
 		//Dong ket noi
 		void CloseConnect()
 		{

@@ -94,6 +94,8 @@ namespace Quanlicudan
 			this.btnLogin.Text = "Login";
 			this.btnLogin.UseVisualStyleBackColor = true;
 			this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+			this.btnLogin.Enter += new System.EventHandler(this.btnLogin_Click);
+			this.btnLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnLogin_KeyPress);
 			// 
 			// btnExit
 			// 
