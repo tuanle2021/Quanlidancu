@@ -33,5 +33,12 @@ namespace Quanlicudan
 		{
 
 		}
+
+		private void btnCudan_Click(object sender, EventArgs e)
+		{
+			FmLogin f = new FmLogin();
+			f.Show();
+			this.Hide();
+		}
 	}
 }

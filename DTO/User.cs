@@ -16,6 +16,7 @@ namespace DTO
 		private string namsinh;
 		private string gioitinh;
 		private string madiaban;
+		private int roles;
 
 		public string Id { get => id; set => id = value; }
 		public string Username { get => username; set => username = value; }
@@ -24,7 +25,9 @@ namespace DTO
 		public string Namsinh { get => namsinh; set => namsinh = value; }
 		public string Gioitinh { get => gioitinh; set => gioitinh = value; }
 		public string Madiaban { get => madiaban; set => madiaban = value; }
-		public User(string id, string username,string password,string ten,string namsinh, string gioitinh, string madiaban)
+		public int Roles { get => roles; set => roles = value; }
+
+		public User(string id, string username,string password,string ten,string namsinh, string gioitinh, string madiaban,int roles)
 		{
 			this.id = id;
 			this.username = username;
@@ -33,6 +36,7 @@ namespace DTO
 			this.namsinh = namsinh;
 			this.gioitinh = gioitinh;
 			this.madiaban = madiaban;
+			this.roles = roles;
 		}
 		public User(DataRow row)
 		{
