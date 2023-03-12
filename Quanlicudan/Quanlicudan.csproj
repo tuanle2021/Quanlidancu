@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FmDancu.cs">
+    <Compile Include="FmCudan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FmDancu.Designer.cs">
-      <DependentUpon>FmDancu.cs</DependentUpon>
+    <Compile Include="FmCudan.Designer.cs">
+      <DependentUpon>FmCudan.cs</DependentUpon>
     </Compile>
     <Compile Include="FmLogin.cs">
       <SubType>Form</SubType>
@@ -87,8 +87,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FmDancu.resx">
-      <DependentUpon>FmDancu.cs</DependentUpon>
+    <EmbeddedResource Include="FmCudan.resx">
+      <DependentUpon>FmCudan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmLogin.resx">
       <DependentUpon>FmLogin.cs</DependentUpon>

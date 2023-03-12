@@ -32,16 +32,23 @@ namespace Quanlicudan
 				f.Show();
 				this.Hide();
 			}
-			;
 		}
 
 		private void btnLogin_Click(object sender, EventArgs e)
 		{
 			string username = txtUsername.Text;
 			string password = txtPassword.Text;
+			/*if (login(username, password))
+			{
+				User loginUser = UserDAO.Instance.GetUserbyUsername(username);
+				FmQuanli f = new FmQuanli(loginUser);
+				f.Show();
+				this.Hide();
+			}*/
+
 			if (login(username, password))
 			{
-				if(checkroles(username)==1)
+				if(checkroles(username))
 				{
 					User loginUser = UserDAO.Instance.GetUserbyUsername(username);
 					FmQuanli f = new FmQuanli(loginUser);
@@ -51,7 +58,7 @@ namespace Quanlicudan
 				else
 				{
 					User loginUser = UserDAO.Instance.GetUserbyUsername(username);
-					FmDancu f = new FmDancu(loginUser);
+					FmCudan f = new FmCudan(loginUser);
 					f.Show();
 					this.Hide();
 				}
@@ -63,11 +70,10 @@ namespace Quanlicudan
 		{
 			return UserDAO.Instance.login(username,password);
 		}
-		int checkroles(string username)
+		bool checkroles(string username)
 		{
-			return UserDAO.Instance.GetRolesbyusername(username);
+			return UserDAO.Instance.checkroles(username);
 		}
-
 		private void btnLogin_KeyPress(object sender, KeyPressEventArgs e)
 		{
 

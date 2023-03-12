@@ -34,5 +34,5 @@ D:\Quanlidancu\Quanlicudan\bin\Debug\DAO.exe.config
 D:\Quanlidancu\Quanlicudan\bin\Debug\DTO.pdb
 D:\Quanlidancu\Quanlicudan\bin\Debug\DTO.exe.config
 D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmThem.resources
-D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmDancu.resources
 D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmUserprofile.resources
+D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmCudan.resources

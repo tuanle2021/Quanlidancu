@@ -18,10 +18,10 @@ namespace Quanlicudan
 
 		public User LoginUser { get => loginUser; set => loginUser = value; }
 
-		public FmQuanli(User lguser)
+		public FmQuanli(User acc)
 		{
 			InitializeComponent();
-			this.loginUser = lguser;
+			this.loginUser = acc;
 			ChuhoBUS.Instance.LoadChuho(dtgvCudan);
 			ShowUserDetail();
 		}
