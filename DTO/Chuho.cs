@@ -15,6 +15,7 @@ namespace DTO
 		private string diachi;
 		private string namsinhCH;
 		private string gioitinh;
+		private string cCCD;
 
 		public string MaHK { get => maHK; set => maHK = value; }
 		public string TenCH { get => tenCH; set => tenCH = value; }
@@ -23,7 +24,9 @@ namespace DTO
 		public string Diachi { get => diachi; set => diachi = value; }
 		public string NamsinhCH { get => namsinhCH; set => namsinhCH = value; }
 		public string Gioitinh { get => gioitinh; set => gioitinh = value; }
-		public Chuho(string maHK, string tenCH, int soThanhvien, string sdt, string diachi, string namsinhCH, string gioitinh)
+		public string CCCD { get => cCCD; set => cCCD = value; }
+
+		public Chuho(string maHK, string tenCH, int soThanhvien, string sdt, string diachi, string namsinhCH, string gioitinh,string cccd)
 		{
 			this.maHK = maHK;
 			this.tenCH = tenCH;
@@ -32,6 +35,7 @@ namespace DTO
 			this.diachi = diachi;
 			this.namsinhCH = namsinhCH;
 			this.gioitinh = gioitinh;
+			this.CCCD = cccd;
 
 		}
 	}

@@ -32,11 +32,12 @@ namespace Quanlicudan
 			string sdt = txtSDT.Text;
 			string diachi = txtDiachi.Text;
 			int nhankhau = (int)nbNhankhau.Value;
-			if(mahk==null || ten==null ||namsinh==null||gioitinh==null||sdt==null|| diachi==null ||nhankhau == 0)
+			string cccd = txtCCCD.Text;
+			if(mahk==null || ten==null ||namsinh==null||gioitinh==null||sdt==null|| diachi==null ||nhankhau == 0|| cccd == null)
 			{
 				MessageBox.Show("Vui lòng nhập đủ thông tin!!");
 			}
-			if (ChuhoDAO.Instance.Themchuho(mahk, ten, namsinh, gioitinh, sdt, diachi, nhankhau))
+			if (ChuhoDAO.Instance.Themchuho(mahk, ten, namsinh, gioitinh, sdt, diachi, nhankhau,cccd))
 			{
 				MessageBox.Show("Thêm thành công");
 				ChuhoDAO.Instance.LoadChuho();

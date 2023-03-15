@@ -50,6 +50,8 @@ namespace Quanlicudan
 			this.txtSDT = new System.Windows.Forms.TextBox();
 			this.txtDiachi = new System.Windows.Forms.TextBox();
 			this.nbNhankhau = new System.Windows.Forms.NumericUpDown();
+			this.txtCCCD = new System.Windows.Forms.TextBox();
+			this.label10 = new System.Windows.Forms.Label();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nbNhankhau)).BeginInit();
 			this.SuspendLayout();
@@ -73,7 +75,7 @@ namespace Quanlicudan
             this.btnHuy});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(485, 27);
+			this.toolStrip1.Size = new System.Drawing.Size(485, 31);
 			this.toolStrip1.TabIndex = 1;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -82,7 +84,7 @@ namespace Quanlicudan
 			this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
 			this.btnHome.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnHome.Name = "btnHome";
-			this.btnHome.Size = new System.Drawing.Size(97, 24);
+			this.btnHome.Size = new System.Drawing.Size(97, 28);
 			this.btnHome.Text = "Trang chủ";
 			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
 			// 
@@ -91,7 +93,7 @@ namespace Quanlicudan
 			this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
 			this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnLuu.Name = "btnLuu";
-			this.btnLuu.Size = new System.Drawing.Size(57, 24);
+			this.btnLuu.Size = new System.Drawing.Size(57, 28);
 			this.btnLuu.Text = "Lưu";
 			this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
 			// 
@@ -100,7 +102,7 @@ namespace Quanlicudan
 			this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
 			this.btnHuy.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnHuy.Name = "btnHuy";
-			this.btnHuy.Size = new System.Drawing.Size(59, 24);
+			this.btnHuy.Size = new System.Drawing.Size(59, 28);
 			this.btnHuy.Text = "Huỷ";
 			// 
 			// label2
@@ -176,7 +178,7 @@ namespace Quanlicudan
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(12, 305);
+			this.label9.Location = new System.Drawing.Point(12, 347);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(111, 18);
 			this.label9.TabIndex = 9;
@@ -226,16 +228,35 @@ namespace Quanlicudan
 			// 
 			// nbNhankhau
 			// 
-			this.nbNhankhau.Location = new System.Drawing.Point(178, 305);
+			this.nbNhankhau.Location = new System.Drawing.Point(178, 347);
 			this.nbNhankhau.Name = "nbNhankhau";
 			this.nbNhankhau.Size = new System.Drawing.Size(120, 22);
 			this.nbNhankhau.TabIndex = 17;
+			// 
+			// txtCCCD
+			// 
+			this.txtCCCD.Location = new System.Drawing.Point(178, 308);
+			this.txtCCCD.Name = "txtCCCD";
+			this.txtCCCD.Size = new System.Drawing.Size(209, 22);
+			this.txtCCCD.TabIndex = 19;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(12, 309);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(111, 18);
+			this.label10.TabIndex = 18;
+			this.label10.Text = "CMND/CCCD";
 			// 
 			// FmThem
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(485, 450);
+			this.Controls.Add(this.txtCCCD);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.nbNhankhau);
 			this.Controls.Add(this.txtDiachi);
 			this.Controls.Add(this.txtSDT);
@@ -285,5 +306,7 @@ namespace Quanlicudan
 		private System.Windows.Forms.TextBox txtSDT;
 		private System.Windows.Forms.TextBox txtDiachi;
 		private System.Windows.Forms.NumericUpDown nbNhankhau;
+		private System.Windows.Forms.TextBox txtCCCD;
+		private System.Windows.Forms.Label label10;
 	}
 }
