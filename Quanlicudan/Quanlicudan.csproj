@@ -79,6 +79,12 @@
     <Compile Include="FmThem.Designer.cs">
       <DependentUpon>FmThem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmTTTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmTTTV.Designer.cs">
+      <DependentUpon>FmTTTV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmUserprofile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmThem.resx">
       <DependentUpon>FmThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmTTTV.resx">
+      <DependentUpon>FmTTTV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmUserprofile.resx">
       <DependentUpon>FmUserprofile.cs</DependentUpon>

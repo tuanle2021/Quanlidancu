@@ -35,7 +35,7 @@ namespace DTO
 			this.diachi = diachi;
 			this.namsinhCH = namsinhCH;
 			this.gioitinh = gioitinh;
-			this.CCCD = cccd;
+			this.cCCD = cccd;
 
 		}
 	}

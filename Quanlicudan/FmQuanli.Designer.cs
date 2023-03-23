@@ -36,10 +36,10 @@ namespace Quanlicudan
 			this.quảnLíTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.quảnLíToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.dânCưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.tạmTrúTạmVắngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.dânCưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.tạmTrúTạmVắngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.btnXem = new System.Windows.Forms.ToolStripButton();
@@ -69,6 +69,9 @@ namespace Quanlicudan
 			this.label1 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.dtgvCudan = new System.Windows.Forms.DataGridView();
+			this.duyệtĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.menutttv = new System.Windows.Forms.ToolStripMenuItem();
+			this.menudkkh = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -82,6 +85,7 @@ namespace Quanlicudan
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
             this.quảnLíToolStripMenuItem,
+            this.duyệtĐơnToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
             this.trợGiúpToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -102,36 +106,20 @@ namespace Quanlicudan
 			// quảnLíTàiKhoảnToolStripMenuItem
 			// 
 			this.quảnLíTàiKhoảnToolStripMenuItem.Name = "quảnLíTàiKhoảnToolStripMenuItem";
-			this.quảnLíTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+			this.quảnLíTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.quảnLíTàiKhoảnToolStripMenuItem.Text = "Quản lí tài khoản";
 			this.quảnLíTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.quảnLíTàiKhoảnToolStripMenuItem_Click);
 			// 
 			// đăngXuấtToolStripMenuItem
 			// 
 			this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-			this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
+			this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
 			// 
 			// quảnLíToolStripMenuItem
 			// 
-			this.quảnLíToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dânCưToolStripMenuItem,
-            this.tạmTrúTạmVắngToolStripMenuItem});
 			this.quảnLíToolStripMenuItem.Name = "quảnLíToolStripMenuItem";
-			this.quảnLíToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
-			this.quảnLíToolStripMenuItem.Text = "Quản lí";
-			// 
-			// dânCưToolStripMenuItem
-			// 
-			this.dânCưToolStripMenuItem.Name = "dânCưToolStripMenuItem";
-			this.dânCưToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
-			this.dânCưToolStripMenuItem.Text = "Dân cư";
-			// 
-			// tạmTrúTạmVắngToolStripMenuItem
-			// 
-			this.tạmTrúTạmVắngToolStripMenuItem.Name = "tạmTrúTạmVắngToolStripMenuItem";
-			this.tạmTrúTạmVắngToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
-			this.tạmTrúTạmVắngToolStripMenuItem.Text = "Tạm trú tạm vắng";
+			this.quảnLíToolStripMenuItem.Size = new System.Drawing.Size(14, 24);
 			// 
 			// thốngKêToolStripMenuItem
 			// 
@@ -144,6 +132,16 @@ namespace Quanlicudan
 			this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
 			this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
 			this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
+			// 
+			// dânCưToolStripMenuItem
+			// 
+			this.dânCưToolStripMenuItem.Name = "dânCưToolStripMenuItem";
+			this.dânCưToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+			// 
+			// tạmTrúTạmVắngToolStripMenuItem
+			// 
+			this.tạmTrúTạmVắngToolStripMenuItem.Name = "tạmTrúTạmVắngToolStripMenuItem";
+			this.tạmTrúTạmVắngToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
 			// 
 			// contextMenuStrip1
 			// 
@@ -219,6 +217,7 @@ namespace Quanlicudan
 			this.btnCapnhat.Name = "btnCapnhat";
 			this.btnCapnhat.Size = new System.Drawing.Size(92, 24);
 			this.btnCapnhat.Text = "Cập nhật";
+			this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
 			// 
 			// btnHuy
 			// 
@@ -414,6 +413,28 @@ namespace Quanlicudan
 			this.dtgvCudan.Size = new System.Drawing.Size(702, 484);
 			this.dtgvCudan.TabIndex = 5;
 			// 
+			// duyệtĐơnToolStripMenuItem
+			// 
+			this.duyệtĐơnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menutttv,
+            this.menudkkh});
+			this.duyệtĐơnToolStripMenuItem.Name = "duyệtĐơnToolStripMenuItem";
+			this.duyệtĐơnToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+			this.duyệtĐơnToolStripMenuItem.Text = "Quản lí ";
+			// 
+			// menutttv
+			// 
+			this.menutttv.Name = "menutttv";
+			this.menutttv.Size = new System.Drawing.Size(224, 26);
+			this.menutttv.Text = "Tạm trú - Tạm Vắng";
+			this.menutttv.Click += new System.EventHandler(this.menutttv_Click);
+			// 
+			// menudkkh
+			// 
+			this.menudkkh.Name = "menudkkh";
+			this.menudkkh.Size = new System.Drawing.Size(224, 26);
+			this.menudkkh.Text = "Đăng kí kết hôn";
+			// 
 			// FmQuanli
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -427,6 +448,7 @@ namespace Quanlicudan
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "FmQuanli";
 			this.Text = "FmQuanli";
+			this.Load += new System.EventHandler(this.FmQuanli_Load);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.toolStrip1.ResumeLayout(false);
@@ -480,5 +502,8 @@ namespace Quanlicudan
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.NumericUpDown nrNhankhau;
 		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.ToolStripMenuItem duyệtĐơnToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem menutttv;
+		private System.Windows.Forms.ToolStripMenuItem menudkkh;
 	}
 }

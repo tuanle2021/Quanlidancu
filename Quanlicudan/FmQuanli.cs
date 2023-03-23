@@ -104,5 +104,21 @@ namespace Quanlicudan
 		{
 			Xoachuho();
 		}
+
+		private void btnCapnhat_Click(object sender, EventArgs e)
+		{
+			ChuhoBUS.Instance.LoadChuho(dtgvCudan);
+		}
+
+		private void FmQuanli_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void menutttv_Click(object sender, EventArgs e)
+		{
+			FmTTTV f = new FmTTTV();
+			f.ShowDialog();
+		}
 	}
 }

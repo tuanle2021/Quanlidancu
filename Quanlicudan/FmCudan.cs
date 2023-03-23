@@ -57,5 +57,42 @@ namespace Quanlicudan
 		{
 			Updateuser();
 		}
+
+		private void tpTamtru_Click(object sender, EventArgs e)
+		{
+
+		}
+		void Submit()
+		{
+			string ten = txtHotenTT.Text;
+			string namsinh = txtNamsinhTT.Text;
+			string cccd = txtCccdTT.Text;
+			string dcthuongtru = txtDiachithuongtru.Text;
+			string dctamtru = txtDiachitamtru.Text;
+			DateTime ngayden = dtpNgayTT.Value.Date;
+			DateTime ngaydi = dtpNgayhetTT.Value.Date;
+			string lido = rtxtLidoTT.Text;
+			int state = 0;
+			if( ten==null || namsinh==null || cccd==null|| dcthuongtru==null ||dctamtru==null|| ngayden==null||ngaydi==null || lido==null)
+			{
+				MessageBox.Show("Vui lòng nhập đầy đủ thông tin đăng kí");
+			}
+			else
+			{
+				if (TamtruDAO.Instance.Submit(ten, namsinh, cccd, dcthuongtru, dctamtru, ngayden, ngaydi, lido, state))
+				{
+					MessageBox.Show("GỬI ĐƠN THÀNH CÔNG");
+				}
+				else
+					MessageBox.Show("VUI LÒNG THỬ LẠI");
+			}
+		}
+
+		private void btnDangki_Click(object sender, EventArgs e)
+		{
+
+			Submit();
+			
+		}
 	}
 }

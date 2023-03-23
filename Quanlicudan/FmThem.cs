@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO;
+using BUS;
 
 namespace Quanlicudan
 {
@@ -40,7 +41,6 @@ namespace Quanlicudan
 			if (ChuhoDAO.Instance.Themchuho(mahk, ten, namsinh, gioitinh, sdt, diachi, nhankhau,cccd))
 			{
 				MessageBox.Show("Thêm thành công");
-				ChuhoDAO.Instance.LoadChuho();
 			}
 			else
 				MessageBox.Show("Thêm thất bại. Vui lòng thử lại !");
