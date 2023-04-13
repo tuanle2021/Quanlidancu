@@ -15,21 +15,31 @@ namespace Quanlicudan
 {
 	public partial class FmQuanli : Form
 	{
-		private User loginUser;
+		private Admin loginUser;
 
-		public User LoginUser { get => loginUser; set => loginUser = value; }
+		public Admin LoginUser { get => loginUser; set => loginUser = value; }
 
-		public FmQuanli(User acc)
+		public FmQuanli(Admin acc)
 		{
 			InitializeComponent();
-			this.loginUser = acc;
-			ChuhoBUS.Instance.LoadChuho(dtgvCudan);
+			this.LoginUser = acc;
+			Loadchuho(acc.Madiaban);
+			txtdiaban.Text = ChuhoDAO.Instance.Getdiaban(acc.Madiaban);
 			ShowUserDetail();
 		}
-
 		private void btnXem_Click(object sender, EventArgs e)
 		{
-			
+			string mahk = txtTimmaho.Text;
+			LoadhoGD(dtgvchitietGD, mahk);
+
+		}
+		void Loadchuho(int matinh)
+		{
+			ChuhoBUS.Instance.LoadChuho(dtgvCudan, matinh);
+		}
+		void LoadhoGD(DataGridView data, string mahk)
+		{
+			data.DataSource = ChitietHogdDAO.Instance.LoadHoGD(mahk);
 		}
 
 		private void btnThem_Click(object sender, EventArgs e)
@@ -40,7 +50,7 @@ namespace Quanlicudan
 
 		private void quảnLíTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FmUserprofile f = new FmUserprofile(loginUser);
+			FmUserprofile f = new FmUserprofile(LoginUser);
 			f.ShowDialog();
 		}
 		void ShowUserDetail()
@@ -77,7 +87,7 @@ namespace Quanlicudan
 				if (ChuhoDAO.Instance.Suachuho(maHK,tenCH, namsinh, gioitinh, sdt, diachi, nhankhau, cccd))
 				{
 					MessageBox.Show("Cập nhật thành công !");
-					ChuhoBUS.Instance.LoadChuho(dtgvCudan);
+					ChuhoBUS.Instance.LoadChuho(dtgvCudan,loginUser.Madiaban);
 				}
 				else
 					MessageBox.Show("Vui lòng thử lại");
@@ -94,7 +104,7 @@ namespace Quanlicudan
 			if (ChuhoDAO.Instance.Xoachuho(maHK))
 			{
 				MessageBox.Show("Xoá thành công hộ gia đình");
-				ChuhoBUS.Instance.LoadChuho(dtgvCudan);
+				ChuhoBUS.Instance.LoadChuho(dtgvCudan, loginUser.Madiaban);
 			}
 			else MessageBox.Show("Vui lòng thử lại sau");
 
@@ -102,12 +112,21 @@ namespace Quanlicudan
 
 		private void btnXoa_Click(object sender, EventArgs e)
 		{
-			Xoachuho();
+			DialogResult dlrs = MessageBox.Show("Xác nhận xoá. Bạn không thể hoàn tác!", "Cảnh báo", MessageBoxButtons.YesNo);
+			if( dlrs== DialogResult.Yes)
+			{
+				Xoachuho();
+			}
+			else
+			{
+				MessageBox.Show("Vui lòng thử lại sau");
+			}
+			
 		}
 
 		private void btnCapnhat_Click(object sender, EventArgs e)
 		{
-			ChuhoBUS.Instance.LoadChuho(dtgvCudan);
+			ChuhoBUS.Instance.LoadChuho(dtgvCudan,loginUser.Madiaban);
 		}
 
 		private void FmQuanli_Load(object sender, EventArgs e)
@@ -119,6 +138,12 @@ namespace Quanlicudan
 		{
 			FmTTTV f = new FmTTTV();
 			f.ShowDialog();
+				
+		}
+
+		private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+		{
+
 		}
 	}
 }

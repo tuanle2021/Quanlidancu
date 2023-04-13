@@ -14,11 +14,11 @@ namespace Quanlicudan
 {
 	public partial class FmUserprofile : Form
 	{
-		private User loginUser;
-		public User LoginUser { get => loginUser;
+		private Admin loginUser;
+		public Admin LoginUser { get => loginUser;
 			set {loginUser=value; ChangeUser(loginUser); }
 		}
-		public FmUserprofile(User acc)
+		public FmUserprofile(Admin acc)
 		{
 			InitializeComponent();
 			LoginUser = acc;
@@ -37,7 +37,7 @@ namespace Quanlicudan
 			}
 			else
 			{
-				if(UserDAO.Instance.UpdateUser(username,fullname,password,newpass))
+				if(AdminDAO.Instance.UpdateUser(username,fullname,password,newpass))
 				{
 					MessageBox.Show("Cập nhật thành công");
 				}
@@ -48,17 +48,22 @@ namespace Quanlicudan
 			}
 		}
 
-		public void ChangeUser(User acc)
+		public void ChangeUser(Admin acc)
 		{
 			loginUser = acc;
 			txtUsername.Text = acc.Username;
 			txtFullname.Text = acc.Ten;
-			txtDiaban.Text = acc.Madiaban;
+			txtDiaban.Text = acc.Madiaban.ToString();
 		}
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			Updateuser();
+		}
+
+		private void FmUserprofile_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

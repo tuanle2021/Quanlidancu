@@ -46,35 +46,51 @@ namespace Quanlicudan
 				this.Hide();
 			}*/
 
-			if (login(username, password))
+			if (loginuser(username, password) || loginadmin (username,password))
 			{
-				if(checkroles(username))
-				{
-					User loginUser = UserDAO.Instance.GetUserbyUsername(username);
-					FmQuanli f = new FmQuanli(loginUser);
-					f.Show();
-					this.Hide();
-				}
-				else
+				if(checkrolesuser(username))
 				{
 					User loginUser = UserDAO.Instance.GetUserbyUsername(username);
 					FmCudan f = new FmCudan(loginUser);
 					f.Show();
 					this.Hide();
 				}
+				if (checkrolesadmin(username))
+				{
+					Admin loginUser = AdminDAO.Instance.GetUserbyUsername(username);
+					FmQuanli f = new FmQuanli(loginUser);
+					f.Show();
+					this.Hide();
+				}
 			}
 			else
 				MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Cảnh báo", MessageBoxButtons.YesNo);
+
+
+
 		}
-		bool login(string username, string password)
+		bool loginuser(string username, string password)
 		{
 			return UserDAO.Instance.login(username,password);
 		}
-		bool checkroles(string username)
+		bool loginadmin(string username, string password)
+		{
+			return AdminDAO.Instance.login(username, password);
+		}
+		bool checkrolesuser(string username)
 		{
 			return UserDAO.Instance.checkroles(username);
 		}
+		bool checkrolesadmin(string username)
+		{
+			return AdminDAO.Instance.checkroles(username);
+		}
 		private void btnLogin_KeyPress(object sender, KeyPressEventArgs e)
+		{
+
+		}
+
+		private void FmLogin_Load(object sender, EventArgs e)
 		{
 
 		}

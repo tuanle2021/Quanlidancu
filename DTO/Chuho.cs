@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace DTO
 {
@@ -16,6 +17,7 @@ namespace DTO
 		private string namsinhCH;
 		private string gioitinh;
 		private string cCCD;
+		private int maTinh;
 
 		public string MaHK { get => maHK; set => maHK = value; }
 		public string TenCH { get => tenCH; set => tenCH = value; }
@@ -25,8 +27,9 @@ namespace DTO
 		public string NamsinhCH { get => namsinhCH; set => namsinhCH = value; }
 		public string Gioitinh { get => gioitinh; set => gioitinh = value; }
 		public string CCCD { get => cCCD; set => cCCD = value; }
+		public int MaTinh { get => maTinh; set => maTinh = value; }
 
-		public Chuho(string maHK, string tenCH, int soThanhvien, string sdt, string diachi, string namsinhCH, string gioitinh,string cccd)
+		public Chuho(string maHK, string tenCH, int soThanhvien, string sdt, string diachi, string namsinhCH, string gioitinh, string cccd, int matinh)
 		{
 			this.maHK = maHK;
 			this.tenCH = tenCH;
@@ -36,7 +39,20 @@ namespace DTO
 			this.namsinhCH = namsinhCH;
 			this.gioitinh = gioitinh;
 			this.cCCD = cccd;
-
+			this.maTinh = matinh;
+		 }
+		public Chuho(DataRow row)
+		{
+			this.maHK = row["MaHK"].ToString();
+			this.tenCH = row["TenCH"].ToString();
+			this.soThanhvien = (int)row["sothanhvien"];
+			this.sdt = row["SDT"].ToString();
+			this.diachi = row["diachi"].ToString();
+			this.namsinhCH = row["namsinhCH"].ToString();
+			this.gioitinh = row["Gioitinh"].ToString();
+			this.cCCD = row["CCCD"].ToString();
+			this.maTinh = (int)row["MaTinh"];
 		}
+
 	}
 }

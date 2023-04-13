@@ -170,6 +170,7 @@ namespace Quanlicudan
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.ClientSize = new System.Drawing.Size(465, 505);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnSave);
@@ -187,6 +188,7 @@ namespace Quanlicudan
 			this.Controls.Add(this.label1);
 			this.Name = "FmUserprofile";
 			this.Text = "FmUserprofile";
+			this.Load += new System.EventHandler(this.FmUserprofile_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

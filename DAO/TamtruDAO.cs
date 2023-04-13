@@ -20,7 +20,7 @@ namespace DAO
 		private TamtruDAO() { }
 		public bool Submit(string ten, string namsinh, string cccd, string dcthuongtru, string dctamtru, DateTime ngayden, DateTime ngaydi, string lido, int state)
 		{
-			int result = DataProvider.Instance.ExecuteNonQuery("insert into dbo.TTTV (Ten, namsinh, CCCD, DCthuongtru, DCtamtru, Ngayden,Ngaydi, Lido, State) values (N'"+ ten +"', N'" + namsinh + "', N'" + cccd + "', N'" + dcthuongtru + "', N'" + dctamtru + "', '" + ngayden + "', N'" + ngaydi + "', N'" + lido + "', '" + state + "')");
+			int result = DataProvider.Instance.ExecuteNonQuery("nsert into dbo.TTTV (Ten, namsinh, CCCD, DCthuongtru, DCtamtru, Ngayden,Ngaydi, Lido, State) values (N'"+ ten +"', N'" + namsinh + "', N'" + cccd + "', N'" + dcthuongtru + "', N'" + dctamtru + "', '" + ngayden + "', N'" + ngaydi + "', N'" + lido + "', '" + state + "')");
 			return result > 0;
 		}
 		public List<TamtruModel> LoadTTTV()

@@ -68,6 +68,7 @@ namespace Quanlicudan
 			// 
 			// toolStrip1
 			// 
+			this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnHome,
@@ -75,7 +76,7 @@ namespace Quanlicudan
             this.btnHuy});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(485, 31);
+			this.toolStrip1.Size = new System.Drawing.Size(485, 27);
 			this.toolStrip1.TabIndex = 1;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -84,7 +85,7 @@ namespace Quanlicudan
 			this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
 			this.btnHome.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnHome.Name = "btnHome";
-			this.btnHome.Size = new System.Drawing.Size(97, 28);
+			this.btnHome.Size = new System.Drawing.Size(97, 24);
 			this.btnHome.Text = "Trang chủ";
 			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
 			// 
@@ -93,7 +94,7 @@ namespace Quanlicudan
 			this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
 			this.btnLuu.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnLuu.Name = "btnLuu";
-			this.btnLuu.Size = new System.Drawing.Size(57, 28);
+			this.btnLuu.Size = new System.Drawing.Size(57, 24);
 			this.btnLuu.Text = "Lưu";
 			this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
 			// 
@@ -102,7 +103,7 @@ namespace Quanlicudan
 			this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
 			this.btnHuy.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnHuy.Name = "btnHuy";
-			this.btnHuy.Size = new System.Drawing.Size(59, 28);
+			this.btnHuy.Size = new System.Drawing.Size(59, 24);
 			this.btnHuy.Text = "Huỷ";
 			// 
 			// label2
@@ -254,6 +255,7 @@ namespace Quanlicudan
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.ClientSize = new System.Drawing.Size(485, 450);
 			this.Controls.Add(this.txtCCCD);
 			this.Controls.Add(this.label10);

@@ -22,9 +22,9 @@ namespace BUS
 			}
 		}
 		private ChuhoBUS() { }
-		public void LoadChuho(DataGridView data)
+		public void LoadChuho(DataGridView data, int matinh)
 		{
-			data.DataSource = ChuhoDAO.Instance.LoadChuho();
+			data.DataSource = ChuhoDAO.Instance.LoadChuho(matinh);
 		}
 	}
 }

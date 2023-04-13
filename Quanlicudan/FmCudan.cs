@@ -94,5 +94,39 @@ namespace Quanlicudan
 			Submit();
 			
 		}
+
+		private void tpKinhdoanh_Click(object sender, EventArgs e)
+		{
+
+		}
+		void Loadtinh()
+		{
+			cbTinh.DataSource = DangkiDAO.Instance.Loadtinh();
+			cbTinh.DisplayMember = "TenTinh";
+			cbTinh.ValueMember = "MaTinh";
+		}
+		void Loadhuyen(int matinh)
+		{
+			cbHuyen.DataSource = DangkiDAO.Instance.Loadhuyen(matinh);
+			cbHuyen.DisplayMember = "TenHuyen";
+			cbHuyen.ValueMember = "MaHuyen";
+		}
+
+		private void tpThongtin_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void FmCudan_Load(object sender, EventArgs e)
+		{
+			Loadtinh();
+		}
+
+		private void cbTinh_SelectedValueChanged(object sender, EventArgs e)
+		{
+
+			Loadhuyen(cbTinh.SelectedIndex + 1);
+			
+		}
 	}
 }

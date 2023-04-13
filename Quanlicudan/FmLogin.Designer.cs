@@ -112,6 +112,7 @@ namespace Quanlicudan
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.ClientSize = new System.Drawing.Size(451, 236);
 			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnLogin);
@@ -123,6 +124,7 @@ namespace Quanlicudan
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.Name = "FmLogin";
 			this.Text = "FmLogin";
+			this.Load += new System.EventHandler(this.FmLogin_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

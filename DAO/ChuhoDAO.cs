@@ -21,11 +21,10 @@ namespace DAO
 			}
 		}
 		private ChuhoDAO() { }
-		public List<Chuho> LoadChuho()
+		public List<Chuho> LoadChuho(int matinh)
 		{
 			List<Chuho> chuho = new List<Chuho>();
-			string query = "select * from Chuho";
-			DataTable data = DataProvider.Instance.ReadData(query);
+			DataTable data = DataProvider.Instance.ReadData("select * from Chuho where MaTinh = " + matinh);
 			foreach(DataRow item in data.Rows )
 			{
 				string maHK = item["MaHK"].ToString();
@@ -36,7 +35,8 @@ namespace DAO
 				string namsinhCH = item["namsinhCH"].ToString();
 				string gioitinh = item["Gioitinh"].ToString();
 				string cccd = item["CCCD"].ToString();
-				Chuho newCH = new Chuho(maHK, tenCH, soThanhvien, sdt, diachi, namsinhCH, gioitinh,cccd);
+				int madiaban = (int)item["MaTinh"];
+				Chuho newCH = new Chuho(maHK, tenCH, soThanhvien, sdt, diachi, namsinhCH, gioitinh,cccd,madiaban);
 				chuho.Add(newCH);
 
 			}
@@ -60,6 +60,24 @@ namespace DAO
 			string query = string.Format("Delete dbo.Chuho where MaHK = N'{0}'", maHK);
 			int result = DataProvider.Instance.ExecuteNonQuery(query);
 			return result > 0;
+		}
+		public Chuho GetHoGDbyMaHK(string maHK)
+		{
+			DataTable data = DataProvider.Instance.ExcuteQuery("Select * from dbo.Chuho where MaHK = '" + maHK + "'");
+			foreach (DataRow item in data.Rows)
+			{
+				return new Chuho(item);
+			}
+			return null;
+		}
+		public string Getdiaban(int madiaban)
+		{
+			DataTable data = DataProvider.Instance.ReadData("select TenTinh from dbo.TINH where MaTinh = " + madiaban);
+			foreach(DataRow item in data.Rows)
+			{
+				return item["TenTinh"].ToString();
+			}
+			return null;
 		}
 	}
 }

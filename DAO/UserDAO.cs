@@ -23,7 +23,7 @@ namespace DAO
 		}
 		public bool checkroles(string username)
 		{
-			string query = "SELECT * FROM dbo.Users where Username = N'" + username + "' and Roles = 1";
+			string query = "SELECT * FROM dbo.Users where Username = N'" + username + "' and Roles = 2";
 			DataTable result = DataProvider.Instance.ReadData(query);
 			return result.Rows.Count > 0;
 		}

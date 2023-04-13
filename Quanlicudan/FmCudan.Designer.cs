@@ -64,28 +64,67 @@ namespace Quanlicudan
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
-			this.tpKethon = new System.Windows.Forms.TabPage();
+			this.tpKinhdoanh = new System.Windows.Forms.TabPage();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.textBox8 = new System.Windows.Forms.TextBox();
+			this.label28 = new System.Windows.Forms.Label();
+			this.txtCccdHKD = new System.Windows.Forms.TextBox();
+			this.label27 = new System.Windows.Forms.Label();
+			this.dtNgaysinhHKD = new System.Windows.Forms.DateTimePicker();
+			this.label26 = new System.Windows.Forms.Label();
+			this.cbGioitinhHKD = new System.Windows.Forms.ComboBox();
+			this.txtTenchuHKD = new System.Windows.Forms.TextBox();
+			this.label16 = new System.Windows.Forms.Label();
+			this.label18 = new System.Windows.Forms.Label();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.label31 = new System.Windows.Forms.Label();
+			this.label30 = new System.Windows.Forms.Label();
+			this.label29 = new System.Windows.Forms.Label();
+			this.cbHuyen = new System.Windows.Forms.ComboBox();
+			this.cbTinh = new System.Windows.Forms.ComboBox();
+			this.label25 = new System.Windows.Forms.Label();
+			this.txtWebHKD = new System.Windows.Forms.TextBox();
+			this.label24 = new System.Windows.Forms.Label();
+			this.txtEmailHKD = new System.Windows.Forms.TextBox();
+			this.label17 = new System.Windows.Forms.Label();
+			this.txtdiachi = new System.Windows.Forms.TextBox();
+			this.txtVonHKD = new System.Windows.Forms.TextBox();
+			this.txtNgheHKD = new System.Windows.Forms.TextBox();
+			this.txtSdtHKD = new System.Windows.Forms.TextBox();
+			this.txtTenHKD = new System.Windows.Forms.TextBox();
+			this.label19 = new System.Windows.Forms.Label();
+			this.label20 = new System.Windows.Forms.Label();
+			this.label21 = new System.Windows.Forms.Label();
+			this.label22 = new System.Windows.Forms.Label();
+			this.label23 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.tpYte = new System.Windows.Forms.TabPage();
 			this.tabcontrolDancu.SuspendLayout();
 			this.tpThongtin.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picAVT)).BeginInit();
 			this.tpTamtru.SuspendLayout();
+			this.tpKinhdoanh.SuspendLayout();
+			this.groupBox2.SuspendLayout();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabcontrolDancu
 			// 
 			this.tabcontrolDancu.Controls.Add(this.tpThongtin);
 			this.tabcontrolDancu.Controls.Add(this.tpTamtru);
-			this.tabcontrolDancu.Controls.Add(this.tpKethon);
+			this.tabcontrolDancu.Controls.Add(this.tpKinhdoanh);
+			this.tabcontrolDancu.Controls.Add(this.tpYte);
 			this.tabcontrolDancu.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabcontrolDancu.Location = new System.Drawing.Point(0, 0);
 			this.tabcontrolDancu.Name = "tabcontrolDancu";
 			this.tabcontrolDancu.SelectedIndex = 0;
-			this.tabcontrolDancu.Size = new System.Drawing.Size(800, 450);
+			this.tabcontrolDancu.Size = new System.Drawing.Size(876, 719);
 			this.tabcontrolDancu.TabIndex = 0;
 			// 
 			// tpThongtin
 			// 
-			this.tpThongtin.BackColor = System.Drawing.Color.LightGray;
+			this.tpThongtin.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.tpThongtin.Controls.Add(this.btnThoat);
 			this.tpThongtin.Controls.Add(this.btnCapnhat);
 			this.tpThongtin.Controls.Add(this.picAVT);
@@ -102,9 +141,10 @@ namespace Quanlicudan
 			this.tpThongtin.Location = new System.Drawing.Point(4, 25);
 			this.tpThongtin.Name = "tpThongtin";
 			this.tpThongtin.Padding = new System.Windows.Forms.Padding(3);
-			this.tpThongtin.Size = new System.Drawing.Size(792, 421);
+			this.tpThongtin.Size = new System.Drawing.Size(868, 690);
 			this.tpThongtin.TabIndex = 0;
 			this.tpThongtin.Text = "Thông tin tài khoản";
+			this.tpThongtin.Click += new System.EventHandler(this.tpThongtin_Click);
 			// 
 			// btnThoat
 			// 
@@ -225,6 +265,7 @@ namespace Quanlicudan
 			// 
 			// tpTamtru
 			// 
+			this.tpTamtru.BackColor = System.Drawing.SystemColors.InactiveCaption;
 			this.tpTamtru.Controls.Add(this.label14);
 			this.tpTamtru.Controls.Add(this.btnDangki);
 			this.tpTamtru.Controls.Add(this.rbtncomfirm);
@@ -244,13 +285,13 @@ namespace Quanlicudan
 			this.tpTamtru.Controls.Add(this.label8);
 			this.tpTamtru.Controls.Add(this.label7);
 			this.tpTamtru.Controls.Add(this.label6);
+			this.tpTamtru.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.tpTamtru.Location = new System.Drawing.Point(4, 25);
 			this.tpTamtru.Name = "tpTamtru";
 			this.tpTamtru.Padding = new System.Windows.Forms.Padding(3);
-			this.tpTamtru.Size = new System.Drawing.Size(792, 421);
+			this.tpTamtru.Size = new System.Drawing.Size(868, 690);
 			this.tpTamtru.TabIndex = 1;
 			this.tpTamtru.Text = "Tạm trú - Tạm vắng";
-			this.tpTamtru.UseVisualStyleBackColor = true;
 			this.tpTamtru.Click += new System.EventHandler(this.tpTamtru_Click);
 			// 
 			// label14
@@ -266,7 +307,7 @@ namespace Quanlicudan
 			// btnDangki
 			// 
 			this.btnDangki.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDangki.Location = new System.Drawing.Point(622, 284);
+			this.btnDangki.Location = new System.Drawing.Point(359, 645);
 			this.btnDangki.Name = "btnDangki";
 			this.btnDangki.Size = new System.Drawing.Size(147, 37);
 			this.btnDangki.TabIndex = 17;
@@ -277,7 +318,7 @@ namespace Quanlicudan
 			// rbtncomfirm
 			// 
 			this.rbtncomfirm.AutoSize = true;
-			this.rbtncomfirm.Location = new System.Drawing.Point(467, 257);
+			this.rbtncomfirm.Location = new System.Drawing.Point(217, 534);
 			this.rbtncomfirm.Name = "rbtncomfirm";
 			this.rbtncomfirm.Size = new System.Drawing.Size(302, 21);
 			this.rbtncomfirm.TabIndex = 16;
@@ -287,66 +328,66 @@ namespace Quanlicudan
 			// 
 			// dtpNgayhetTT
 			// 
-			this.dtpNgayhetTT.Location = new System.Drawing.Point(204, 292);
+			this.dtpNgayhetTT.Location = new System.Drawing.Point(594, 304);
 			this.dtpNgayhetTT.Name = "dtpNgayhetTT";
 			this.dtpNgayhetTT.Size = new System.Drawing.Size(230, 22);
 			this.dtpNgayhetTT.TabIndex = 15;
 			// 
 			// dtpNgayTT
 			// 
-			this.dtpNgayTT.Location = new System.Drawing.Point(204, 254);
+			this.dtpNgayTT.Location = new System.Drawing.Point(233, 304);
 			this.dtpNgayTT.Name = "dtpNgayTT";
 			this.dtpNgayTT.Size = new System.Drawing.Size(230, 22);
 			this.dtpNgayTT.TabIndex = 14;
 			// 
 			// rtxtLidoTT
 			// 
-			this.rtxtLidoTT.Location = new System.Drawing.Point(472, 81);
+			this.rtxtLidoTT.Location = new System.Drawing.Point(233, 354);
 			this.rtxtLidoTT.Name = "rtxtLidoTT";
-			this.rtxtLidoTT.Size = new System.Drawing.Size(297, 161);
+			this.rtxtLidoTT.Size = new System.Drawing.Size(591, 161);
 			this.rtxtLidoTT.TabIndex = 13;
 			this.rtxtLidoTT.Text = "";
 			// 
 			// txtDiachitamtru
 			// 
-			this.txtDiachitamtru.Location = new System.Drawing.Point(204, 220);
+			this.txtDiachitamtru.Location = new System.Drawing.Point(233, 266);
 			this.txtDiachitamtru.Name = "txtDiachitamtru";
-			this.txtDiachitamtru.Size = new System.Drawing.Size(230, 22);
+			this.txtDiachitamtru.Size = new System.Drawing.Size(333, 22);
 			this.txtDiachitamtru.TabIndex = 12;
 			// 
 			// txtDiachithuongtru
 			// 
-			this.txtDiachithuongtru.Location = new System.Drawing.Point(204, 185);
+			this.txtDiachithuongtru.Location = new System.Drawing.Point(233, 222);
 			this.txtDiachithuongtru.Name = "txtDiachithuongtru";
-			this.txtDiachithuongtru.Size = new System.Drawing.Size(230, 22);
+			this.txtDiachithuongtru.Size = new System.Drawing.Size(333, 22);
 			this.txtDiachithuongtru.TabIndex = 11;
 			// 
 			// txtCccdTT
 			// 
-			this.txtCccdTT.Location = new System.Drawing.Point(204, 149);
+			this.txtCccdTT.Location = new System.Drawing.Point(233, 175);
 			this.txtCccdTT.Name = "txtCccdTT";
-			this.txtCccdTT.Size = new System.Drawing.Size(171, 22);
+			this.txtCccdTT.Size = new System.Drawing.Size(333, 22);
 			this.txtCccdTT.TabIndex = 10;
 			// 
 			// txtNamsinhTT
 			// 
-			this.txtNamsinhTT.Location = new System.Drawing.Point(204, 112);
+			this.txtNamsinhTT.Location = new System.Drawing.Point(233, 126);
 			this.txtNamsinhTT.Name = "txtNamsinhTT";
-			this.txtNamsinhTT.Size = new System.Drawing.Size(171, 22);
+			this.txtNamsinhTT.Size = new System.Drawing.Size(333, 22);
 			this.txtNamsinhTT.TabIndex = 9;
 			// 
 			// txtHotenTT
 			// 
-			this.txtHotenTT.Location = new System.Drawing.Point(204, 78);
+			this.txtHotenTT.Location = new System.Drawing.Point(233, 78);
 			this.txtHotenTT.Name = "txtHotenTT";
-			this.txtHotenTT.Size = new System.Drawing.Size(171, 22);
+			this.txtHotenTT.Size = new System.Drawing.Size(333, 22);
 			this.txtHotenTT.TabIndex = 8;
 			// 
 			// label13
 			// 
 			this.label13.AutoSize = true;
 			this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label13.Location = new System.Drawing.Point(405, 80);
+			this.label13.Location = new System.Drawing.Point(19, 371);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(50, 18);
 			this.label13.TabIndex = 7;
@@ -356,17 +397,17 @@ namespace Quanlicudan
 			// 
 			this.label12.AutoSize = true;
 			this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label12.Location = new System.Drawing.Point(18, 292);
+			this.label12.Location = new System.Drawing.Point(478, 307);
 			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(169, 18);
+			this.label12.Size = new System.Drawing.Size(88, 18);
 			this.label12.TabIndex = 6;
-			this.label12.Text = "Ngày hết hạn tạm trú:";
+			this.label12.Text = "Đến ngày :";
 			// 
 			// label11
 			// 
 			this.label11.AutoSize = true;
 			this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.Location = new System.Drawing.Point(18, 254);
+			this.label11.Location = new System.Drawing.Point(18, 304);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(169, 18);
 			this.label11.TabIndex = 5;
@@ -376,7 +417,7 @@ namespace Quanlicudan
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(18, 220);
+			this.label10.Location = new System.Drawing.Point(18, 270);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(156, 18);
 			this.label10.TabIndex = 4;
@@ -386,7 +427,7 @@ namespace Quanlicudan
 			// 
 			this.label9.AutoSize = true;
 			this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(19, 186);
+			this.label9.Location = new System.Drawing.Point(19, 227);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(146, 18);
 			this.label9.TabIndex = 3;
@@ -397,7 +438,7 @@ namespace Quanlicudan
 			// 
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(19, 150);
+			this.label8.Location = new System.Drawing.Point(19, 180);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(92, 18);
 			this.label8.TabIndex = 2;
@@ -407,7 +448,7 @@ namespace Quanlicudan
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(19, 112);
+			this.label7.Location = new System.Drawing.Point(19, 130);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(89, 18);
 			this.label7.TabIndex = 1;
@@ -419,33 +460,390 @@ namespace Quanlicudan
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.Location = new System.Drawing.Point(19, 78);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(168, 18);
+			this.label6.Size = new System.Drawing.Size(192, 18);
 			this.label6.TabIndex = 0;
-			this.label6.Text = "Họ tên người đăng kí:";
+			this.label6.Text = "Họ tên người đăng kí (*):";
 			// 
-			// tpKethon
+			// tpKinhdoanh
 			// 
-			this.tpKethon.Location = new System.Drawing.Point(4, 25);
-			this.tpKethon.Name = "tpKethon";
-			this.tpKethon.Size = new System.Drawing.Size(792, 421);
-			this.tpKethon.TabIndex = 2;
-			this.tpKethon.Text = "Đăng kí kết hôn";
-			this.tpKethon.UseVisualStyleBackColor = true;
+			this.tpKinhdoanh.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.tpKinhdoanh.Controls.Add(this.groupBox2);
+			this.tpKinhdoanh.Controls.Add(this.groupBox1);
+			this.tpKinhdoanh.Controls.Add(this.label15);
+			this.tpKinhdoanh.Controls.Add(this.button1);
+			this.tpKinhdoanh.Location = new System.Drawing.Point(4, 25);
+			this.tpKinhdoanh.Name = "tpKinhdoanh";
+			this.tpKinhdoanh.Size = new System.Drawing.Size(868, 690);
+			this.tpKinhdoanh.TabIndex = 3;
+			this.tpKinhdoanh.Text = "Đăng kí kinh doanh";
+			this.tpKinhdoanh.Click += new System.EventHandler(this.tpKinhdoanh_Click);
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.textBox8);
+			this.groupBox2.Controls.Add(this.label28);
+			this.groupBox2.Controls.Add(this.txtCccdHKD);
+			this.groupBox2.Controls.Add(this.label27);
+			this.groupBox2.Controls.Add(this.dtNgaysinhHKD);
+			this.groupBox2.Controls.Add(this.label26);
+			this.groupBox2.Controls.Add(this.cbGioitinhHKD);
+			this.groupBox2.Controls.Add(this.txtTenchuHKD);
+			this.groupBox2.Controls.Add(this.label16);
+			this.groupBox2.Controls.Add(this.label18);
+			this.groupBox2.Location = new System.Drawing.Point(36, 325);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(772, 201);
+			this.groupBox2.TabIndex = 45;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Thông tin ĐẠI DIỆN hộ kinh doanh";
+			// 
+			// textBox8
+			// 
+			this.textBox8.Location = new System.Drawing.Point(274, 160);
+			this.textBox8.Name = "textBox8";
+			this.textBox8.Size = new System.Drawing.Size(492, 22);
+			this.textBox8.TabIndex = 48;
+			// 
+			// label28
+			// 
+			this.label28.AutoSize = true;
+			this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label28.Location = new System.Drawing.Point(12, 164);
+			this.label28.Name = "label28";
+			this.label28.Size = new System.Drawing.Size(81, 18);
+			this.label28.TabIndex = 47;
+			this.label28.Text = "Quốc tịch";
+			// 
+			// txtCccdHKD
+			// 
+			this.txtCccdHKD.Location = new System.Drawing.Point(274, 126);
+			this.txtCccdHKD.Name = "txtCccdHKD";
+			this.txtCccdHKD.Size = new System.Drawing.Size(492, 22);
+			this.txtCccdHKD.TabIndex = 46;
+			// 
+			// label27
+			// 
+			this.label27.AutoSize = true;
+			this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label27.Location = new System.Drawing.Point(12, 130);
+			this.label27.Name = "label27";
+			this.label27.Size = new System.Drawing.Size(111, 18);
+			this.label27.TabIndex = 45;
+			this.label27.Text = "CMND/CCCD";
+			// 
+			// dtNgaysinhHKD
+			// 
+			this.dtNgaysinhHKD.Location = new System.Drawing.Point(274, 90);
+			this.dtNgaysinhHKD.Name = "dtNgaysinhHKD";
+			this.dtNgaysinhHKD.Size = new System.Drawing.Size(268, 22);
+			this.dtNgaysinhHKD.TabIndex = 44;
+			// 
+			// label26
+			// 
+			this.label26.AutoSize = true;
+			this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label26.Location = new System.Drawing.Point(12, 98);
+			this.label26.Name = "label26";
+			this.label26.Size = new System.Drawing.Size(81, 18);
+			this.label26.TabIndex = 43;
+			this.label26.Text = "Sinh ngày";
+			// 
+			// cbGioitinhHKD
+			// 
+			this.cbGioitinhHKD.FormattingEnabled = true;
+			this.cbGioitinhHKD.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+			this.cbGioitinhHKD.Location = new System.Drawing.Point(274, 61);
+			this.cbGioitinhHKD.Name = "cbGioitinhHKD";
+			this.cbGioitinhHKD.Size = new System.Drawing.Size(141, 24);
+			this.cbGioitinhHKD.TabIndex = 42;
+			// 
+			// txtTenchuHKD
+			// 
+			this.txtTenchuHKD.Location = new System.Drawing.Point(274, 27);
+			this.txtTenchuHKD.Name = "txtTenchuHKD";
+			this.txtTenchuHKD.Size = new System.Drawing.Size(492, 22);
+			this.txtTenchuHKD.TabIndex = 41;
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label16.Location = new System.Drawing.Point(12, 71);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(71, 18);
+			this.label16.TabIndex = 40;
+			this.label16.Text = "Giới tính";
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label18.Location = new System.Drawing.Point(9, 35);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(234, 18);
+			this.label18.TabIndex = 39;
+			this.label18.Text = "Tên đại diện hộ kinh doanh (*)";
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.label31);
+			this.groupBox1.Controls.Add(this.label30);
+			this.groupBox1.Controls.Add(this.label29);
+			this.groupBox1.Controls.Add(this.cbHuyen);
+			this.groupBox1.Controls.Add(this.cbTinh);
+			this.groupBox1.Controls.Add(this.label25);
+			this.groupBox1.Controls.Add(this.txtWebHKD);
+			this.groupBox1.Controls.Add(this.label24);
+			this.groupBox1.Controls.Add(this.txtEmailHKD);
+			this.groupBox1.Controls.Add(this.label17);
+			this.groupBox1.Controls.Add(this.txtdiachi);
+			this.groupBox1.Controls.Add(this.txtVonHKD);
+			this.groupBox1.Controls.Add(this.txtNgheHKD);
+			this.groupBox1.Controls.Add(this.txtSdtHKD);
+			this.groupBox1.Controls.Add(this.txtTenHKD);
+			this.groupBox1.Controls.Add(this.label19);
+			this.groupBox1.Controls.Add(this.label20);
+			this.groupBox1.Controls.Add(this.label21);
+			this.groupBox1.Controls.Add(this.label22);
+			this.groupBox1.Controls.Add(this.label23);
+			this.groupBox1.Location = new System.Drawing.Point(35, 69);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(773, 250);
+			this.groupBox1.TabIndex = 44;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Thông tin hộ kinh doanh";
+			// 
+			// label31
+			// 
+			this.label31.AutoSize = true;
+			this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label31.Location = new System.Drawing.Point(272, 92);
+			this.label31.Name = "label31";
+			this.label31.Size = new System.Drawing.Size(115, 18);
+			this.label31.TabIndex = 48;
+			this.label31.Text = "Chi tiết địa chỉ";
+			// 
+			// label30
+			// 
+			this.label30.AutoSize = true;
+			this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label30.Location = new System.Drawing.Point(490, 53);
+			this.label30.Name = "label30";
+			this.label30.Size = new System.Drawing.Size(55, 18);
+			this.label30.TabIndex = 47;
+			this.label30.Text = "Huyện";
+			// 
+			// label29
+			// 
+			this.label29.AutoSize = true;
+			this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label29.Location = new System.Drawing.Point(272, 55);
+			this.label29.Name = "label29";
+			this.label29.Size = new System.Drawing.Size(40, 18);
+			this.label29.TabIndex = 46;
+			this.label29.Text = "Tỉnh";
+			// 
+			// cbHuyen
+			// 
+			this.cbHuyen.AllowDrop = true;
+			this.cbHuyen.FormattingEnabled = true;
+			this.cbHuyen.Location = new System.Drawing.Point(551, 49);
+			this.cbHuyen.Name = "cbHuyen";
+			this.cbHuyen.Size = new System.Drawing.Size(215, 24);
+			this.cbHuyen.TabIndex = 45;
+			// 
+			// cbTinh
+			// 
+			this.cbTinh.FormattingEnabled = true;
+			this.cbTinh.Location = new System.Drawing.Point(333, 52);
+			this.cbTinh.Name = "cbTinh";
+			this.cbTinh.Size = new System.Drawing.Size(121, 24);
+			this.cbTinh.TabIndex = 44;
+			this.cbTinh.SelectedValueChanged += new System.EventHandler(this.cbTinh_SelectedValueChanged);
+			// 
+			// label25
+			// 
+			this.label25.AutoSize = true;
+			this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label25.Location = new System.Drawing.Point(476, 214);
+			this.label25.Name = "label25";
+			this.label25.Size = new System.Drawing.Size(42, 18);
+			this.label25.TabIndex = 43;
+			this.label25.Text = "VNĐ";
+			// 
+			// txtWebHKD
+			// 
+			this.txtWebHKD.Location = new System.Drawing.Point(274, 154);
+			this.txtWebHKD.Name = "txtWebHKD";
+			this.txtWebHKD.Size = new System.Drawing.Size(493, 22);
+			this.txtWebHKD.TabIndex = 42;
+			// 
+			// label24
+			// 
+			this.label24.AutoSize = true;
+			this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label24.Location = new System.Drawing.Point(9, 154);
+			this.label24.Name = "label24";
+			this.label24.Size = new System.Drawing.Size(74, 18);
+			this.label24.TabIndex = 41;
+			this.label24.Text = "Website:";
+			// 
+			// txtEmailHKD
+			// 
+			this.txtEmailHKD.Location = new System.Drawing.Point(576, 125);
+			this.txtEmailHKD.Name = "txtEmailHKD";
+			this.txtEmailHKD.Size = new System.Drawing.Size(190, 22);
+			this.txtEmailHKD.TabIndex = 40;
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label17.Location = new System.Drawing.Point(515, 127);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(55, 18);
+			this.label17.TabIndex = 39;
+			this.label17.Text = "Email:";
+			// 
+			// txtdiachi
+			// 
+			this.txtdiachi.Location = new System.Drawing.Point(422, 88);
+			this.txtdiachi.Name = "txtdiachi";
+			this.txtdiachi.Size = new System.Drawing.Size(344, 22);
+			this.txtdiachi.TabIndex = 38;
+			// 
+			// txtVonHKD
+			// 
+			this.txtVonHKD.Location = new System.Drawing.Point(274, 210);
+			this.txtVonHKD.Name = "txtVonHKD";
+			this.txtVonHKD.Size = new System.Drawing.Size(196, 22);
+			this.txtVonHKD.TabIndex = 31;
+			// 
+			// txtNgheHKD
+			// 
+			this.txtNgheHKD.Location = new System.Drawing.Point(274, 182);
+			this.txtNgheHKD.Name = "txtNgheHKD";
+			this.txtNgheHKD.Size = new System.Drawing.Size(493, 22);
+			this.txtNgheHKD.TabIndex = 30;
+			// 
+			// txtSdtHKD
+			// 
+			this.txtSdtHKD.Location = new System.Drawing.Point(274, 126);
+			this.txtSdtHKD.Name = "txtSdtHKD";
+			this.txtSdtHKD.Size = new System.Drawing.Size(160, 22);
+			this.txtSdtHKD.TabIndex = 29;
+			// 
+			// txtTenHKD
+			// 
+			this.txtTenHKD.Location = new System.Drawing.Point(274, 21);
+			this.txtTenHKD.Name = "txtTenHKD";
+			this.txtTenHKD.Size = new System.Drawing.Size(493, 22);
+			this.txtTenHKD.TabIndex = 27;
+			// 
+			// label19
+			// 
+			this.label19.AutoSize = true;
+			this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label19.Location = new System.Drawing.Point(8, 211);
+			this.label19.Name = "label19";
+			this.label19.Size = new System.Drawing.Size(120, 18);
+			this.label19.TabIndex = 23;
+			this.label19.Text = "Vốn đăng kí (*)";
+			// 
+			// label20
+			// 
+			this.label20.AutoSize = true;
+			this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label20.Location = new System.Drawing.Point(9, 182);
+			this.label20.Name = "label20";
+			this.label20.Size = new System.Drawing.Size(213, 18);
+			this.label20.TabIndex = 22;
+			this.label20.Text = "Ngành / nghề kinh doanh(*)";
+			this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label21.Location = new System.Drawing.Point(9, 126);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(89, 18);
+			this.label21.TabIndex = 21;
+			this.label21.Text = "Điện thoại:";
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label22.Location = new System.Drawing.Point(9, 53);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(185, 18);
+			this.label22.TabIndex = 20;
+			this.label22.Text = "Địa điểm kinh doanh (*)";
+			// 
+			// label23
+			// 
+			this.label23.AutoSize = true;
+			this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label23.Location = new System.Drawing.Point(9, 25);
+			this.label23.Name = "label23";
+			this.label23.Size = new System.Drawing.Size(174, 18);
+			this.label23.TabIndex = 19;
+			this.label23.Text = "Tên Hộ kinh doanh (*)";
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label15.Location = new System.Drawing.Point(259, 25);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(329, 20);
+			this.label15.TabIndex = 37;
+			this.label15.Text = "ĐĂNG KÍ KINH DOANH HỘ GIA ĐÌNH";
+			// 
+			// button1
+			// 
+			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.Location = new System.Drawing.Point(342, 545);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(147, 37);
+			this.button1.TabIndex = 36;
+			this.button1.Text = "Gửi mẫu đăng kí";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// tpYte
+			// 
+			this.tpYte.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.tpYte.Location = new System.Drawing.Point(4, 25);
+			this.tpYte.Name = "tpYte";
+			this.tpYte.Size = new System.Drawing.Size(868, 690);
+			this.tpYte.TabIndex = 4;
+			this.tpYte.Text = "Khai báo y tế";
 			// 
 			// FmCudan
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.ClientSize = new System.Drawing.Size(876, 719);
 			this.Controls.Add(this.tabcontrolDancu);
 			this.Name = "FmCudan";
 			this.Text = "FmCudan";
+			this.Load += new System.EventHandler(this.FmCudan_Load);
 			this.tabcontrolDancu.ResumeLayout(false);
 			this.tpThongtin.ResumeLayout(false);
 			this.tpThongtin.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picAVT)).EndInit();
 			this.tpTamtru.ResumeLayout(false);
 			this.tpTamtru.PerformLayout();
+			this.tpKinhdoanh.ResumeLayout(false);
+			this.tpKinhdoanh.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			this.groupBox2.PerformLayout();
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -487,6 +885,41 @@ namespace Quanlicudan
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TabPage tpKethon;
+		private System.Windows.Forms.TabPage tpKinhdoanh;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.TextBox textBox8;
+		private System.Windows.Forms.Label label28;
+		private System.Windows.Forms.TextBox txtCccdHKD;
+		private System.Windows.Forms.Label label27;
+		private System.Windows.Forms.DateTimePicker dtNgaysinhHKD;
+		private System.Windows.Forms.Label label26;
+		private System.Windows.Forms.ComboBox cbGioitinhHKD;
+		private System.Windows.Forms.TextBox txtTenchuHKD;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.Label label25;
+		private System.Windows.Forms.TextBox txtWebHKD;
+		private System.Windows.Forms.Label label24;
+		private System.Windows.Forms.TextBox txtEmailHKD;
+		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.TextBox txtdiachi;
+		private System.Windows.Forms.TextBox txtVonHKD;
+		private System.Windows.Forms.TextBox txtNgheHKD;
+		private System.Windows.Forms.TextBox txtSdtHKD;
+		private System.Windows.Forms.TextBox txtTenHKD;
+		private System.Windows.Forms.Label label19;
+		private System.Windows.Forms.Label label20;
+		private System.Windows.Forms.Label label21;
+		private System.Windows.Forms.Label label22;
+		private System.Windows.Forms.Label label23;
+		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.TabPage tpYte;
+		private System.Windows.Forms.Label label31;
+		private System.Windows.Forms.Label label30;
+		private System.Windows.Forms.Label label29;
+		private System.Windows.Forms.ComboBox cbHuyen;
+		private System.Windows.Forms.ComboBox cbTinh;
 	}
 }
