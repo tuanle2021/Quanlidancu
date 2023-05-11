@@ -1,4 +1,5 @@
 ﻿create table TINH(MaTinh int primary key, TenTinh nchar(50))
+create table KETHON(Id int primary key, TenChong nchar(50),CCCDChong nchar(10), TenVo nchar(50), CCCDVo nchar(10), State int default 0)
 create table HUYEN(MaHuyen int primary key, TenHuyen nchar(50), MaTinh int, FOREIGN KEY(MaTinh) REFERENCES dbo.TINH(MaTinh) )
 drop table HUYEN
 drop table DangkiKD

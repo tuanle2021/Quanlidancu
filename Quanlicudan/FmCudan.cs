@@ -128,5 +128,42 @@ namespace Quanlicudan
 			Loadhuyen(cbTinh.SelectedIndex + 1);
 			
 		}
+		void DKKinhdoanh()
+		{
+			string tenHKD = txtTenHKD.Text;
+			int matinh = cbTinh.SelectedIndex;
+			int mahuyen = cbHuyen.SelectedIndex;
+			string diachi = txtdiachi.Text;
+			string sdt = txtSdtHKD.Text;
+			string email = txtEmailHKD.Text;
+			string website = txtWebHKD.Text;
+			string nganhnghe = txtNgheHKD.Text;
+			string vondangki = txtVonHKD.Text + " VND";
+			string tendaidienHKD = txtTenchuHKD.Text;
+			string gioitinh = cbGioitinhHKD.SelectedItem.ToString();
+			DateTime ngaysinh = dtNgaysinhHKD.Value;
+			string cccd = txtCccdHKD.Text;
+			string quoctich = txtQuoctichHKD.Text;
+			if (tenHKD == null || diachi == null || email == null)
+			{
+				MessageBox.Show("VUI LÒNG NHẬP ĐẦY ĐỦ THÔNG TIN ĐĂNG KÍ");
+			}
+			else
+			{
+				if(HKDDAO.Instance.SubmitHKD(tenHKD, matinh, mahuyen, diachi, sdt, email, website, nganhnghe, vondangki, tendaidienHKD, gioitinh, ngaysinh, cccd, quoctich))
+				{
+					MessageBox.Show("ĐÃ GỬI ĐƠN ĐĂNG KÍ");
+				}
+				else MessageBox.Show("HÃY THỬ LẠI");
+
+			}
+			
+
+
+		}
+		private void btnKinhdoanh_Click(object sender, EventArgs e)
+		{
+			DKKinhdoanh();
+		}
 	}
 }
