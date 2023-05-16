@@ -22,6 +22,7 @@ namespace Quanlicudan
 		{
 			InitializeComponent();
 			LoginUser = acc;
+			
 		}
 		void Updateuser()
 		{
@@ -51,6 +52,11 @@ namespace Quanlicudan
 			loginUser = acc;
 			txtUsername.Text = acc.Username;
 			txtFullname.Text = acc.Ten;
+			dtngaysinh.Value = acc.Namsinh;
+			if (acc.TTHonnhan == 1)
+				txtTTHonnhan.Text = "Đã kết hôn";
+			else
+				txtTTHonnhan.Text = "Độc thân";
 		}
 
 		private void btnCapnhat_Click(object sender, EventArgs e)
@@ -164,6 +170,59 @@ namespace Quanlicudan
 		private void btnKinhdoanh_Click(object sender, EventArgs e)
 		{
 			DKKinhdoanh();
+		}
+
+		private void tpKethon_Click(object sender, EventArgs e)
+		{
+			if (txtcccdVk == null || txtCCCDCk == null || txtDiachiVk == null || txtdiachiCk == null)
+			{
+				
+				MessageBox.Show("Vui lòng điền đủ thông tin");
+			}
+			else
+			{
+				if (KethonDAO.Instance.KiemtraCCCD(txtCCCDCk.Text) && KethonDAO.Instance.KiemtraCCCD(txtcccdVk.Text))
+				{
+					if (KethonDAO.Instance.SetTTHonnhan(txtcccdVk.Text) && KethonDAO.Instance.SetTTHonnhan(txtCCCDCk.Text) && KethonDAO.Instance.Submit(txthotenCk.Text,txtCCCDCk.Text,txthotenVk.Text,txtcccdVk.Text))
+					{
+						MessageBox.Show("Gửi đơn thành công");
+					}
+					else
+						MessageBox.Show(" Thử lại sau ");
+				}
+				else MessageBox.Show("Kiểm tra cư dân chưa đăng kí tại địa bàn này");
+							
+			}
+				
+		}
+
+		private void btnThongtin_Click(object sender, EventArgs e)
+		{
+			if (txtCCCDCk != null)
+			{
+				string s = txtCCCDCk.Text;
+				txthotenCk.Text = KethonDAO.Instance.GetTenbyCCCD(s);
+			}
+			if (txtcccdVk != null)
+			{
+				string s1 = txtcccdVk.Text;
+				txthotenVk.Text = KethonDAO.Instance.GetTenbyCCCD(s1);
+			}
+		}
+
+		private void tpKhaisinh_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnKhaisinh_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

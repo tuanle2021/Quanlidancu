@@ -55,6 +55,12 @@
     <Compile Include="FmCudan.Designer.cs">
       <DependentUpon>FmCudan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmKETHON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmKETHON.Designer.cs">
+      <DependentUpon>FmKETHON.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FmCudan.resx">
       <DependentUpon>FmCudan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmKETHON.resx">
+      <DependentUpon>FmKETHON.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmLogin.resx">
       <DependentUpon>FmLogin.cs</DependentUpon>

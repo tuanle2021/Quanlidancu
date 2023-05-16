@@ -28,9 +28,7 @@ namespace DAO
 		}
 		public bool checkroles(string username)
 		{
-			string query = "SELECT * FROM dbo.Admin where Username = N'" + username + "' and Roles = 1";
-			DataTable result = DataProvider.Instance.ReadData(query);
-			return result.Rows.Count > 0;
+			return true;
 		}
 		//lay user theo username
 		public Admin GetUserbyUsername(string username)
@@ -46,7 +44,7 @@ namespace DAO
 		//update user
 		public bool UpdateUser(string username, string fullname, string password, string newpass)
 		{
-			int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAdmin '" + username + "' , '" + fullname + "', '" + password + "', '" + newpass + "' ");
+			int result = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAdmin '" + username + "' , '" + fullname + "', '" + password + "', '" + newpass + "'");
 			return result > 0;
 		}
 	}

@@ -145,5 +145,16 @@ namespace Quanlicudan
 		{
 
 		}
+
+		private void txtdiaban_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void menudkkh_Click(object sender, EventArgs e)
+		{
+			//FmKETHON f = new FmKETHON();
+			//f.ShowDialog();
+		}
 	}
 }

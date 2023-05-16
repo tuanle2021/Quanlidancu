@@ -45,5 +45,10 @@ namespace Quanlicudan
 			else
 				MessageBox.Show("Thêm thất bại. Vui lòng thử lại !");
 		}
+
+		private void FmThem_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

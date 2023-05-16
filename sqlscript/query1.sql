@@ -9,6 +9,10 @@ create table HUYEN(MaHuyen int, TenHuyen nchar(50), MaTinh int, FOREIGN KEY(MaTi
 create table Users(Id int primary key,Username nchar(50), Password nchar(50), Ten nchar(50), Namsinh nchar(10), Gioitinh nchar(10), Roles int default 2, Madiaban int)
 create table DangkiKD(Id int,TenhoKD nchar(100), MaTinh int , MaHuyen int , Diadiem nchar(100), SDT nchar(10), Email nchar(100), Website nchar(100), Nganhnghe nchar(100), Von nchar(20), Tendaidien nchar(100), Gioitinh nchar(10), Ngaysinh Date, CCCD nchar(10), Quoctich nchar(50), FOREIGN KEY(MaTinh) REFERENCES dbo.TINH(MaTinh)) 
 alter table Chuho add MaTinh int
+alter table ChitietHoGD add TTHonnhan int default 0
+alter table ChitietHoGD add username nchar(50)
+alter table ChitietHoGD add password nchar(50)
+
 alter table Chuho add foreign key (MaTinh) references TINH(MaTinh)
 alter table dbo.TINH drop column TenTinh
 alter table dbo.TINH add TenTinh nchar(100)

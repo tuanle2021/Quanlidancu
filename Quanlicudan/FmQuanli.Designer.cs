@@ -147,6 +147,7 @@ namespace Quanlicudan
 			this.menudkkh.Name = "menudkkh";
 			this.menudkkh.Size = new System.Drawing.Size(224, 26);
 			this.menudkkh.Text = "Đăng kí kết hôn";
+			this.menudkkh.Click += new System.EventHandler(this.menudkkh_Click);
 			// 
 			// thốngKêToolStripMenuItem
 			// 
@@ -471,6 +472,7 @@ namespace Quanlicudan
 			this.txtdiaban.Name = "txtdiaban";
 			this.txtdiaban.Size = new System.Drawing.Size(181, 27);
 			this.txtdiaban.TabIndex = 8;
+			this.txtdiaban.TextChanged += new System.EventHandler(this.txtdiaban_TextChanged);
 			// 
 			// FmQuanli
 			// 

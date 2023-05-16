@@ -37,3 +37,4 @@ D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmThem.resources
 D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmUserprofile.resources
 D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmCudan.resources
 D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmTTTV.resources
+D:\Quanlidancu\Quanlicudan\obj\Debug\Quanlicudan.FmKETHON.resources

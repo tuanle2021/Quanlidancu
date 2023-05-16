@@ -57,7 +57,7 @@ namespace DAO
 		}
 		public bool Xoachuho(string maHK)
 		{
-			string query = string.Format("Delete dbo.Chuho where MaHK = N'{0}'", maHK);
+			string query = string.Format("Delete from dbo.Chuho where MaHK = N'{0}'", maHK);
 			int result = DataProvider.Instance.ExecuteNonQuery(query);
 			return result > 0;
 		}

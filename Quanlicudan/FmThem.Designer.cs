@@ -278,6 +278,7 @@ namespace Quanlicudan
 			this.Controls.Add(this.label1);
 			this.Name = "FmThem";
 			this.Text = "FmThem";
+			this.Load += new System.EventHandler(this.FmThem_Load);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nbNhankhau)).EndInit();

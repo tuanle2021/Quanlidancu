@@ -13,40 +13,37 @@ namespace DTO
 		private string username;
 		private string password;
 		private string ten;
-		private string namsinh;
+		private DateTime namsinh;
 		private string gioitinh;
-		private int madiaban;
-		private int roles;
+		private int tTHonnhan;
 
 		public string Username { get => username; set => username = value; }
 		public string Password { get => password; set => password = value; }
 		public string Ten { get => ten; set => ten = value; }
-		public string Namsinh { get => namsinh; set => namsinh = value; }
 		public string Gioitinh { get => gioitinh; set => gioitinh = value; }
-		public int Roles { get => roles; set => roles = value; }
-		public int Madiaban { get => madiaban; set => madiaban = value; }
 		public int Id { get => id; set => id = value; }
+		public DateTime Namsinh { get => namsinh; set => namsinh = value; }
+		public int TTHonnhan { get => tTHonnhan; set => tTHonnhan = value; }
 
-		public User(int id, string username,string password,string ten,string namsinh, string gioitinh, int madiaban,int roles)
+		public User(int id, string username,string password,string ten,DateTime namsinh, string gioitinh, int tthonnhan)
 		{
 			this.Id = id;
 			this.username = username;
 			this.password = password;
 			this.ten = ten;
-			this.namsinh = namsinh;
+			this.Namsinh = namsinh;
 			this.gioitinh = gioitinh;
-			this.Madiaban = madiaban;
-			this.roles = roles;
+			this.tTHonnhan = tthonnhan;
 		}
 		public User(DataRow row)
 		{
 			this.Id =(int)row["id"];
 			this.username =row["username"].ToString();
 			this.password =row["password"].ToString();
-			this.ten =row["ten"].ToString();
-			this.namsinh = row["namsinh"].ToString();
-			this.gioitinh = row["gioitinh"].ToString();
-			this.Madiaban = (int)row["madiaban"];
+			this.ten =row["HoTen"].ToString();
+			this.Namsinh = (DateTime)row["Ngaysinh"];
+			this.gioitinh = row["Gioitinh"].ToString();
+			this.tTHonnhan = (int)row["TTHonnhan"];
 		}
 	}
 }
