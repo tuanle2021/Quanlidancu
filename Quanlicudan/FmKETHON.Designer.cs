@@ -65,6 +65,7 @@ namespace Quanlicudan
 			this.btnDuyet.TabIndex = 5;
 			this.btnDuyet.Text = "Duyệt";
 			this.btnDuyet.UseVisualStyleBackColor = true;
+			this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
 			// 
 			// dtgvKETHON
 			// 

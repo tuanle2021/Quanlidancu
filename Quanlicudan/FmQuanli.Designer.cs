@@ -85,7 +85,7 @@ namespace Quanlicudan
 			// 
 			// menuStrip1
 			// 
-			this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.menuStrip1.BackColor = System.Drawing.SystemColors.HotTrack;
 			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
@@ -179,7 +179,7 @@ namespace Quanlicudan
 			// 
 			// toolStrip1
 			// 
-			this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+			this.toolStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnXem,
@@ -478,7 +478,7 @@ namespace Quanlicudan
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.ClientSize = new System.Drawing.Size(1517, 695);
 			this.Controls.Add(this.txtdiaban);
 			this.Controls.Add(this.label9);

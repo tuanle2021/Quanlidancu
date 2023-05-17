@@ -57,10 +57,10 @@ namespace Quanlicudan
 				}
 				if (checkrolesadmin(username))
 				{
-					Admin loginUser = AdminDAO.Instance.GetUserbyUsername(username);
-					FmQuanli f = new FmQuanli(loginUser);
-					f.Show();
-					this.Hide();
+						Admin loginUser = AdminDAO.Instance.GetUserbyUsername(username);
+						FmQuanli f = new FmQuanli(loginUser);
+						f.Show();
+						this.Hide();
 				}
 			}
 			else

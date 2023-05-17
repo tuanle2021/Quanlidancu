@@ -153,8 +153,8 @@ namespace Quanlicudan
 
 		private void menudkkh_Click(object sender, EventArgs e)
 		{
-			//FmKETHON f = new FmKETHON();
-			//f.ShowDialog();
+			FmKETHON f = new FmKETHON();
+			f.ShowDialog();
 		}
 	}
 }

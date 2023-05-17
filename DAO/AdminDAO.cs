@@ -28,7 +28,9 @@ namespace DAO
 		}
 		public bool checkroles(string username)
 		{
-			return true;
+			string query = "SELECT * FROM dbo.Admin where Username = N'" + username + "' and Roles = 1 ";
+			DataTable result = DataProvider.Instance.ReadData(query);
+			return result.Rows.Count > 0;
 		}
 		//lay user theo username
 		public Admin GetUserbyUsername(string username)

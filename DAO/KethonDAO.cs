@@ -65,14 +65,28 @@ namespace DAO
 			int result = DataProvider.Instance.ExecuteNonQuery("update dbo.ChitietHoGD SET TTHonnhan = 1 where CCCD = N'"+ cccd + "'");
 			return result > 0;
 		}
-		public string GetDiachibyMaHK(string MaHK)
+		public bool DuyetdonKethon(int id)
 		{
-			DataTable data = DataProvider.Instance.ReadData("select diachi from dbo.Chuho where CCCD = '" + MaHK + "'");
+			int result = DataProvider.Instance.ExecuteNonQuery("update dbo.KETHON set State = 1 where id = '" + id + "'");
+			return result > 0;
+		}
+		public string GetDiachibyMaHK(string cccd)
+		{
+			DataTable data = DataProvider.Instance.ReadData("select Chuho.diachi from dbo.Chuho,dbo.ChitietHoGD where ChitietHoGD.CCCD = N'" + cccd + "' and Chuho.MaHK = ChitietHoGD.MaHK");
 			foreach (DataRow item in data.Rows)
 			{
 				return item["diachi"].ToString();
 			}
 			return null;
+		}
+		public DateTime GetngaysinhbyCCCD(string cccd)
+		{
+			DataTable data = DataProvider.Instance.ReadData("select Ngaysinh from dbo.ChitietHoGD where CCCD = '" + cccd + "'");
+			foreach (DataRow item in data.Rows)
+			{
+				return (DateTime)item["Ngaysinh"];
+			}
+			return DateTime.Today;
 		}
 	}
 }

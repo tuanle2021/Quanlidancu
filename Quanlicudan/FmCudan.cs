@@ -21,8 +21,7 @@ namespace Quanlicudan
 		public FmCudan(User acc)
 		{
 			InitializeComponent();
-			LoginUser = acc;
-			
+			this.LoginUser = acc;			
 		}
 		void Updateuser()
 		{
@@ -53,6 +52,15 @@ namespace Quanlicudan
 			txtUsername.Text = acc.Username;
 			txtFullname.Text = acc.Ten;
 			dtngaysinh.Value = acc.Namsinh;
+			if (acc.Gioitinh == "Nu")
+			{
+				txtcccdVk.Text = acc.Cccd;
+				
+			}
+			else
+				txtCCCDCk.Text = acc.Cccd;
+
+
 			if (acc.TTHonnhan == 1)
 				txtTTHonnhan.Text = "Đã kết hôn";
 			else
@@ -183,12 +191,13 @@ namespace Quanlicudan
 			{
 				if (KethonDAO.Instance.KiemtraCCCD(txtCCCDCk.Text) && KethonDAO.Instance.KiemtraCCCD(txtcccdVk.Text))
 				{
-					if (KethonDAO.Instance.SetTTHonnhan(txtcccdVk.Text) && KethonDAO.Instance.SetTTHonnhan(txtCCCDCk.Text) && KethonDAO.Instance.Submit(txthotenCk.Text,txtCCCDCk.Text,txthotenVk.Text,txtcccdVk.Text))
+					if(KethonDAO.Instance.Submit(txthotenCk.Text,txtCCCDCk.Text,txthotenVk.Text,txtcccdVk.Text))
 					{
 						MessageBox.Show("Gửi đơn thành công");
 					}
 					else
-						MessageBox.Show(" Thử lại sau ");
+						MessageBox.Show("Gửi đơn thất bại");
+
 				}
 				else MessageBox.Show("Kiểm tra cư dân chưa đăng kí tại địa bàn này");
 							
@@ -202,12 +211,17 @@ namespace Quanlicudan
 			{
 				string s = txtCCCDCk.Text;
 				txthotenCk.Text = KethonDAO.Instance.GetTenbyCCCD(s);
+				dtngaysinhChong.Value = KethonDAO.Instance.GetngaysinhbyCCCD(s);
+				txtdiachiCk.Text = KethonDAO.Instance.GetDiachibyMaHK(s);
 			}
 			if (txtcccdVk != null)
 			{
 				string s1 = txtcccdVk.Text;
 				txthotenVk.Text = KethonDAO.Instance.GetTenbyCCCD(s1);
+				dtNgaysinhVo.Value = KethonDAO.Instance.GetngaysinhbyCCCD(s1);
+				txtdiachiCk.Text = KethonDAO.Instance.GetDiachibyMaHK(s1);
 			}
+
 		}
 
 		private void tpKhaisinh_Click(object sender, EventArgs e)
@@ -221,6 +235,35 @@ namespace Quanlicudan
 		}
 
 		private void btnKhaisinh_Click(object sender, EventArgs e)
+		{
+			string hoten = txtHotenKS.Text;
+			string gioitinh = cbgioitinhKS.SelectedItem.ToString();
+			DateTime ngaysinh = dtngaysinhKS.Value;
+			string quequan = txtQueuquanKS.Text;
+			string noisinh = txtNoisinhKS.Text;
+			string cccdme = txtCCCDMe.Text;
+			string cccdcha = txtCCCDCha.Text;
+			if(txtCCCDCha == null || txtCCCDMe == null || txtHotenKS == null)
+			{
+				MessageBox.Show("Vui lòng điền đủ thông tin");
+			}
+			else
+			{
+				if (KhaisinhDAO.Instance.Submit(hoten, gioitinh, ngaysinh, quequan, noisinh, cccdme, cccdcha))
+				{
+					MessageBox.Show("Đăng kí thành công");
+				}
+				else
+				{
+					MessageBox.Show("VUi lòng thử lại");
+				}
+			}
+		
+
+
+		}
+
+		private void btnKethon_Click(object sender, EventArgs e)
 		{
 
 		}

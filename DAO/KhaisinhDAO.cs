@@ -17,6 +17,10 @@ namespace DAO
 			private set { instance = value; }
 		}
 		private KhaisinhDAO() { }
-
+		public bool Submit(string hoten, string gioitinh, DateTime ngaysinh,string quequan, string noisinh, string cccdme,string cccdcha)
+		{
+			int result = DataProvider.Instance.ExecuteNonQuery("insert into dbo.KHAISINH(Hoten,Gioitinh,Ngaysinh,Quequan,Noisinh,CCCDMe,CCCDCha) values (N'" + hoten + "', N'" + gioitinh + "', '" + ngaysinh + "','" + quequan + "', '" + noisinh + "', '" + cccdme + "', '" + cccdcha + "')");
+			return result > 0;
+		}
 	}
 }

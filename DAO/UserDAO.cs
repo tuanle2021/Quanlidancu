@@ -17,18 +17,20 @@ namespace DAO
 		//dang nhap
 		public bool login(string username, string password)
 		{
-			string query = "SELECT * FROM dbo.ChitietHoGD where Username = N'" + username + "' and Password = N'" + password + "'";
+			string query = "SELECT * FROM dbo.ChitietHoGD where Username = N'" + username + "' and password = N'" + password + "'";
 			DataTable result = DataProvider.Instance.ReadData(query);
 			return result.Rows.Count > 0;
 		}
 		public bool checkroles(string username)
 		{
-			return true;
+			string query = "SELECT * FROM dbo.ChitietHoGD where Username = N'" + username + "'";
+			DataTable result = DataProvider.Instance.ReadData(query);
+			return result.Rows.Count > 0;
 		}
 		//lay user theo username
 		public User GetUserbyUsername(string username)
 		{
-			DataTable data = DataProvider.Instance.ExcuteQuery("Select * from dbo.ChitietHoGD where Username = '" + username + "'");
+			DataTable data = DataProvider.Instance.ExcuteQuery("SELECT * from dbo.ChitietHoGD where username = '" + username + "'");
 			foreach (DataRow item in data.Rows)
 			{
 				return new User(item);

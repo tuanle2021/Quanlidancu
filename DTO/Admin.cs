@@ -30,7 +30,7 @@ namespace DTO
 
 		public Admin(string id, string username, string password, string ten, string namsinh, string gioitinh, int madiaban, int roles)
 		{
-			this.Id = id;
+			this.id = id;
 			this.username = username;
 			this.password = password;
 			this.ten = ten;
@@ -41,13 +41,13 @@ namespace DTO
 		}
 		public Admin(DataRow row)
 		{
-			this.Id = row["id"].ToString();
+			this.id = row["id"].ToString();
 			this.username = row["username"].ToString();
 			this.password = row["password"].ToString();
 			this.ten = row["ten"].ToString();
 			this.namsinh = row["namsinh"].ToString();
 			this.gioitinh = row["gioitinh"].ToString();
-			this.Madiaban = (int)row["madiaban"];
+			this.madiaban = (int)row["madiaban"];
 		}
 	}
 }
