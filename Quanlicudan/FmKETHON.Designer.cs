@@ -88,7 +88,7 @@ namespace Quanlicudan
 			this.Controls.Add(this.btnDuyet);
 			this.Controls.Add(this.dtgvKETHON);
 			this.Name = "FmKETHON";
-			this.Text = "FmKETHON";
+			this.Text = "Quản lí đăng kí kết hôn";
 			this.Load += new System.EventHandler(this.FmKETHON_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvKETHON)).EndInit();
 			this.ResumeLayout(false);

@@ -187,7 +187,7 @@ namespace Quanlicudan
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "FmUserprofile";
-			this.Text = "FmUserprofile";
+			this.Text = "Thay đổi thông tin Admin";
 			this.Load += new System.EventHandler(this.FmUserprofile_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

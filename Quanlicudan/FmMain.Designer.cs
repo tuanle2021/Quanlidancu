@@ -81,7 +81,7 @@ namespace Quanlicudan
 			this.Controls.Add(this.label1);
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "FmMain";
-			this.Text = "Form1";
+			this.Text = "Cổng thông tin dân cư thành phố";
 			this.Load += new System.EventHandler(this.FmMain_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

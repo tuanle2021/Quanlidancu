@@ -277,7 +277,7 @@ namespace Quanlicudan
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.label1);
 			this.Name = "FmThem";
-			this.Text = "FmThem";
+			this.Text = "Thêm 1 hộ gia đình mới";
 			this.Load += new System.EventHandler(this.FmThem_Load);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();

@@ -32,6 +32,8 @@ namespace Quanlicudan
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmCudan));
 			this.tabcontrolDancu = new System.Windows.Forms.TabControl();
 			this.tpThongtin = new System.Windows.Forms.TabPage();
+			this.txtGioitinh = new System.Windows.Forms.TextBox();
+			this.label59 = new System.Windows.Forms.Label();
 			this.dtngaysinh = new System.Windows.Forms.DateTimePicker();
 			this.txtTTHonnhan = new System.Windows.Forms.TextBox();
 			this.label42 = new System.Windows.Forms.Label();
@@ -108,6 +110,7 @@ namespace Quanlicudan
 			this.btnThongtin = new System.Windows.Forms.Button();
 			this.btnKethon = new System.Windows.Forms.Button();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
+			this.dtNgaysinhVo = new System.Windows.Forms.DateTimePicker();
 			this.txtDiachiVk = new System.Windows.Forms.TextBox();
 			this.txtcccdVk = new System.Windows.Forms.TextBox();
 			this.txthotenVk = new System.Windows.Forms.TextBox();
@@ -116,6 +119,7 @@ namespace Quanlicudan
 			this.label39 = new System.Windows.Forms.Label();
 			this.label40 = new System.Windows.Forms.Label();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.dtngaysinhChong = new System.Windows.Forms.DateTimePicker();
 			this.txtdiachiCk = new System.Windows.Forms.TextBox();
 			this.txtCCCDCk = new System.Windows.Forms.TextBox();
 			this.txthotenCk = new System.Windows.Forms.TextBox();
@@ -160,10 +164,6 @@ namespace Quanlicudan
 			this.label48 = new System.Windows.Forms.Label();
 			this.label44 = new System.Windows.Forms.Label();
 			this.label43 = new System.Windows.Forms.Label();
-			this.dtngaysinhChong = new System.Windows.Forms.DateTimePicker();
-			this.dtNgaysinhVo = new System.Windows.Forms.DateTimePicker();
-			this.txtGioitinh = new System.Windows.Forms.TextBox();
-			this.label59 = new System.Windows.Forms.Label();
 			this.tabcontrolDancu.SuspendLayout();
 			this.tpThongtin.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picAVT)).BeginInit();
@@ -225,6 +225,23 @@ namespace Quanlicudan
 			this.tpThongtin.TabIndex = 0;
 			this.tpThongtin.Text = "Thông tin tài khoản";
 			this.tpThongtin.Click += new System.EventHandler(this.tpThongtin_Click);
+			// 
+			// txtGioitinh
+			// 
+			this.txtGioitinh.Location = new System.Drawing.Point(578, 375);
+			this.txtGioitinh.Name = "txtGioitinh";
+			this.txtGioitinh.Size = new System.Drawing.Size(187, 22);
+			this.txtGioitinh.TabIndex = 33;
+			// 
+			// label59
+			// 
+			this.label59.AutoSize = true;
+			this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label59.Location = new System.Drawing.Point(335, 379);
+			this.label59.Name = "label59";
+			this.label59.Size = new System.Drawing.Size(71, 18);
+			this.label59.TabIndex = 32;
+			this.label59.Text = "Giới tính";
 			// 
 			// dtngaysinh
 			// 
@@ -985,6 +1002,13 @@ namespace Quanlicudan
 			this.groupBox4.TabStop = false;
 			this.groupBox4.Text = "Bên Nữ";
 			// 
+			// dtNgaysinhVo
+			// 
+			this.dtNgaysinhVo.Location = new System.Drawing.Point(193, 112);
+			this.dtNgaysinhVo.Name = "dtNgaysinhVo";
+			this.dtNgaysinhVo.Size = new System.Drawing.Size(232, 22);
+			this.dtNgaysinhVo.TabIndex = 45;
+			// 
 			// txtDiachiVk
 			// 
 			this.txtDiachiVk.Location = new System.Drawing.Point(193, 155);
@@ -1066,6 +1090,13 @@ namespace Quanlicudan
 			this.groupBox3.TabIndex = 41;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Bên Nam";
+			// 
+			// dtngaysinhChong
+			// 
+			this.dtngaysinhChong.Location = new System.Drawing.Point(182, 112);
+			this.dtngaysinhChong.Name = "dtngaysinhChong";
+			this.dtngaysinhChong.Size = new System.Drawing.Size(232, 22);
+			this.dtngaysinhChong.TabIndex = 28;
 			// 
 			// txtdiachiCk
 			// 
@@ -1508,37 +1539,6 @@ namespace Quanlicudan
 			this.label43.TabIndex = 38;
 			this.label43.Text = "ĐĂNG KÍ GIẤY KHAI SINH";
 			// 
-			// dtngaysinhChong
-			// 
-			this.dtngaysinhChong.Location = new System.Drawing.Point(182, 112);
-			this.dtngaysinhChong.Name = "dtngaysinhChong";
-			this.dtngaysinhChong.Size = new System.Drawing.Size(232, 22);
-			this.dtngaysinhChong.TabIndex = 28;
-			// 
-			// dtNgaysinhVo
-			// 
-			this.dtNgaysinhVo.Location = new System.Drawing.Point(193, 112);
-			this.dtNgaysinhVo.Name = "dtNgaysinhVo";
-			this.dtNgaysinhVo.Size = new System.Drawing.Size(232, 22);
-			this.dtNgaysinhVo.TabIndex = 45;
-			// 
-			// txtGioitinh
-			// 
-			this.txtGioitinh.Location = new System.Drawing.Point(578, 375);
-			this.txtGioitinh.Name = "txtGioitinh";
-			this.txtGioitinh.Size = new System.Drawing.Size(187, 22);
-			this.txtGioitinh.TabIndex = 33;
-			// 
-			// label59
-			// 
-			this.label59.AutoSize = true;
-			this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label59.Location = new System.Drawing.Point(335, 379);
-			this.label59.Name = "label59";
-			this.label59.Size = new System.Drawing.Size(71, 18);
-			this.label59.TabIndex = 32;
-			this.label59.Text = "Giới tính";
-			// 
 			// FmCudan
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1547,7 +1547,7 @@ namespace Quanlicudan
 			this.ClientSize = new System.Drawing.Size(1068, 731);
 			this.Controls.Add(this.tabcontrolDancu);
 			this.Name = "FmCudan";
-			this.Text = "FmCudan";
+			this.Text = "Cổng thông tin cư dân";
 			this.Load += new System.EventHandler(this.FmCudan_Load);
 			this.tabcontrolDancu.ResumeLayout(false);
 			this.tpThongtin.ResumeLayout(false);

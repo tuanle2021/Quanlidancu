@@ -90,7 +90,7 @@ namespace Quanlicudan
 			this.Controls.Add(this.btnDuyet);
 			this.Controls.Add(this.dtgvTTTV);
 			this.Name = "FmTTTV";
-			this.Text = "FmTTTV";
+			this.Text = "Danh sách tạm trú - tạm vắng";
 			this.Load += new System.EventHandler(this.FmTTTV_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dtgvTTTV)).EndInit();
 			this.ResumeLayout(false);
